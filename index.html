@@ -1,0 +1,64 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@openmev/router</title><meta name="description" content="Documentation for @openmev/router"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@openmev/router</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@openmev/router</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#open-mev-router" id="open-mev-router" style="color: inherit; text-decoration: none;">
+  <h1>Open MEV Router</h1>
+</a>
+<p>OpenMevRouter contract serves to replace the SushiswapRouter contract on Ethereum, Avalanche and Polygon.</p>
+<p>Inbuilt MEV contract. For the User it aims to offer:</p>
+<ol>
+<li>Better order routing for minimal slippage</li>
+<li>At source MEV with instant user rewards</li>
+</ol>
+
+<a href="#version-1-mev-strategies" id="version-1-mev-strategies" style="color: inherit; text-decoration: none;">
+  <h2>Version 1 MEV strategies</h2>
+</a>
+<ul>
+<li>cross-dex backruns for swaps and liquidity changes</li>
+<li>reduced slippage fallback router</li>
+</ul>
+<p>The contract leverages and depends on 2 external protocols:</p>
+<ol>
+<li>Aave V2 for flashloan backruns</li>
+<li>Uniswap V2 (or equivalent on another network) for backrun completion and fallback swaps</li>
+</ol>
+
+<a href="#version-1-testing-progress" id="version-1-testing-progress" style="color: inherit; text-decoration: none;">
+  <h2>Version 1 testing progress</h2>
+</a>
+<p>Swaps and backruns are working as expected.
+A full test suite needs validation - test suite is written in - python3 (pytest/hypothesis) - solidity (ds-test/dapptools/foundry)</p>
+<p>yAcademy scheduled for auditing
+3rd party contracted auditor scheduled as well for an audit.
+Potentially some gas savings and optimisations to do.</p>
+
+<a href="#improvements-for-version-2" id="improvements-for-version-2" style="color: inherit; text-decoration: none;">
+  <h2>Improvements for Version 2</h2>
+</a>
+<ul>
+<li>sandwiches - held off because code gets a bit messier and not so attractive for users</li>
+<li>triangular backruns - search and calculations will use alot more gas</li>
+<li>curve integration for backruns and reduced slippage</li>
+</ul>
+
+<a href="#advantages-over-current-setup-for-backruns-and-sandwiches" id="advantages-over-current-setup-for-backruns-and-sandwiches" style="color: inherit; text-decoration: none;">
+  <h2>Advantages over current setup for backruns and sandwiches</h2>
+</a>
+<ul>
+<li>no state lag - calculations are exact at the time of execution</li>
+<li>capture all sushiswap smart contract txs, not just UX</li>
+<li>instant user rewards upon successful backrun</li>
+<li>no bundle needed. Tx is self contained and executed accurately whenever it goes on-chain, so it does not need to compete to be at the head of the block for a pre-known state.</li>
+<li>can run on Avalanche and Polygon with no change</li>
+<li>transparency for methods and rewards</li>
+<li>can work with or without MEV protection relay</li>
+</ul>
+
+<a href="#disadvantages" id="disadvantages" style="color: inherit; text-decoration: none;">
+  <h2>Disadvantages</h2>
+</a>
+<ul>
+<li>potentially more gas cost for swaps to check backruns even if no backrun is executed</li>
+<li>dependent on external protocols</li>
+<li>lose privacy over math and methods</li>
+</ul>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/ERC20__factory.html" class="tsd-kind-icon">ERC20__factory</a></li><li class="tsd-kind-class"><a href="classes/IERC20__factory.html" class="tsd-kind-icon">IERC20__factory</a></li><li class="tsd-kind-class"><a href="classes/ILendingPoolAddressesProvider__factory.html" class="tsd-kind-icon">ILending<wbr/>Pool<wbr/>Addresses<wbr/>Provider__factory</a></li><li class="tsd-kind-class"><a href="classes/ILendingPool__factory.html" class="tsd-kind-icon">ILending<wbr/>Pool__factory</a></li><li class="tsd-kind-class"><a href="classes/IUniswapV2Factory__factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Factory__factory</a></li><li class="tsd-kind-class"><a href="classes/IUniswapV2Pair__factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Pair__factory</a></li><li class="tsd-kind-class"><a href="classes/IUniswapV2Router01__factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router01__factory</a></li><li class="tsd-kind-class"><a href="classes/IUniswapV2Router02__factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router02__factory</a></li><li class="tsd-kind-class"><a href="classes/IWETH__factory.html" class="tsd-kind-icon">IWETH__factory</a></li><li class="tsd-kind-class"><a href="classes/OpenMevLibrary__factory.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Library__factory</a></li><li class="tsd-kind-class"><a href="classes/OpenMevRouter__factory.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router__factory</a></li><li class="tsd-kind-class"><a href="classes/TwoStepOwnable__factory.html" class="tsd-kind-icon">Two<wbr/>Step<wbr/>Ownable__factory</a></li><li class="tsd-kind-interface"><a href="interfaces/ERC20.html" class="tsd-kind-icon">ERC20</a></li><li class="tsd-kind-interface"><a href="interfaces/IERC20.html" class="tsd-kind-icon">IERC20</a></li><li class="tsd-kind-interface"><a href="interfaces/ILendingPool.html" class="tsd-kind-icon">ILending<wbr/>Pool</a></li><li class="tsd-kind-interface"><a href="interfaces/ILendingPoolAddressesProvider.html" class="tsd-kind-icon">ILending<wbr/>Pool<wbr/>Addresses<wbr/>Provider</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Factory</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Pair.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Pair</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Router01.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router01</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Router02.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router02</a></li><li class="tsd-kind-interface"><a href="interfaces/IWETH.html" class="tsd-kind-icon">IWETH</a></li><li class="tsd-kind-interface"><a href="interfaces/OpenMevLibrary.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Library</a></li><li class="tsd-kind-interface"><a href="interfaces/OpenMevRouter.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router</a></li><li class="tsd-kind-interface"><a href="interfaces/TwoStepOwnable.html" class="tsd-kind-icon">Two<wbr/>Step<wbr/>Ownable</a></li></ul></nav></div></div></div><footer class=""><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li><li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="overlay"></div><script src="assets/main.js"></script></body></html>
