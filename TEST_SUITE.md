@@ -9,13 +9,13 @@ license: CC-2.5-NC-ND
 # OpenMEV Router Contract Test Suite
 
 [TOC]
-- [OpenMEV Router Contract Test Suite](#openmev-router-contract-test-suite)
-    - [TEST 1 small swaps complete as usual](#test-1-small-swaps-complete-as-usual)
-    - [TEST 2: force uniswap trade through +ve slippage](#test-2-force-uniswap-trade-through-ve-slippage)
-    - [TEST 3: flashloan backrun from large swap](#test-3-flashloan-backrun-from-large-swap)
-    - [TEST 5](#test-5)
-- [@run  non-flashloan backrun from large swap (compare to TEST 3)](#run--non-flashloan-backrun-from-large-swap-compare-to-test-3)
 
+- [OpenMEV Router Contract Test Suite](#openmev-router-contract-test-suite)
+    + [TEST 1](#test-1) 
+    + [TEST 2](#test-2)
+    + [TEST 3](#test-3)
+    + [TEST 4](#test-4)
+    + [TEST 5](#test-5)
 
 Deploy Open MEV Router contract
 
@@ -27,7 +27,8 @@ Transaction sent: 0xfbbdb9f378185da217d7bec8e639a987a00d346f5b879d406e2d39938c14
 Deployed. Funding test account
 
 
-### TEST 1 small swaps complete as usual
+### TEST 1 
+> small swaps complete as usual
 
 
 Swap ETH -> OHM
@@ -90,7 +91,8 @@ User ETH balance =  999798024600903628058
 User DAI balance =  626994000514970938067
 
 
-### TEST 2: force uniswap trade through +ve slippage
+### TEST 2
+> force uniswap trade through slippage
 
 
 Swap ETH -> USDC
@@ -107,7 +109,8 @@ User USDC balance =  630183003
 Reverting state
 
 
-### TEST 3: flashloan backrun from large swap
+### TEST 3
+> flashloan backrun from large swap
 
 
 Swap 300 ETH -> DAI
@@ -127,7 +130,8 @@ MEV_VAULT DAI balance =  5396890556585287140906
 SUSHI_VAULT DAI balance =  5396890556585287140906
 
 
-TEST 4: non-backrunable large multi-hop swap (no opposite pairs)
+### TEST 4
+> non-backrunable large multi-hop swap (no opposite pairs)
 
 
 Swap 700 ETH -> OHM -> DAI
@@ -140,10 +144,11 @@ Transaction sent: 0x81160412980dc71b99fa12b3b40a04416e0ff16b107d7034df0679aa1bf9
 
 User ETH balance =  300000000000000000000
 
-#===========================#
+
+
 ### TEST 5
-# @run  non-flashloan backrun from large swap (compare to TEST 3)
-#===========================#
+> run  non-flashloan backrun from large swap (compare to TEST 3)
+
 
 Transfering DAI to contract
 
