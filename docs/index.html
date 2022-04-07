@@ -1,397 +1,144 @@
-<!DOCTYPE html>
-<html class="default">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <title>@openmev/router</title>
-    <meta name="description" content="Documentation for @openmev/router" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="stylesheet" href="assets/highlight.css" />
-    <script async src="assets/search.js" id="search-script"></script>
-  </head>
-  <body>
-    <script>
-      document.body.classList.add(localStorage.getItem("tsd-theme") || "os");
-    </script>
-    <header>
-      <div class="tsd-page-toolbar">
-        <div class="container">
-          <div class="table-wrap">
-            <div class="table-cell" id="tsd-search" data-base=".">
-              <div class="field">
-                <label
-                  for="tsd-search-field"
-                  class="tsd-widget search no-caption"
-                  >Search</label
-                ><input type="text" id="tsd-search-field" />
-              </div>
-              <ul class="results">
-                <li class="state loading">Preparing search index...</li>
-                <li class="state failure">The search index is not available</li>
-              </ul>
-              <a href="index.html" class="title">@openmev/router</a>
-            </div>
-            <div class="table-cell" id="tsd-widgets">
-              <div id="tsd-filter">
-                <a
-                  href="#"
-                  class="tsd-widget options no-caption"
-                  data-toggle="options"
-                  >Options</a
-                >
-                <div class="tsd-filter-group">
-                  <div class="tsd-select" id="tsd-filter-visibility">
-                    <span class="tsd-select-label">All</span>
-                    <ul class="tsd-select-list">
-                      <li data-value="public">Public</li>
-                      <li data-value="protected">Public/Protected</li>
-                      <li data-value="private" class="selected">All</li>
-                    </ul>
-                  </div>
-                  <input
-                    type="checkbox"
-                    id="tsd-filter-inherited"
-                    checked
-                  /><label class="tsd-widget" for="tsd-filter-inherited"
-                    >Inherited</label
-                  ><input
-                    type="checkbox"
-                    id="tsd-filter-externals"
-                    checked
-                  /><label class="tsd-widget" for="tsd-filter-externals"
-                    >Externals</label
-                  >
-                </div>
-              </div>
-              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu"
-                >Menu</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tsd-page-title">
-        <div class="container"><h1>@openmev/router</h1></div>
-      </div>
-    </header>
-    <div class="container container-main">
-      <div class="row">
-        <div class="col-8 col-content">
-          <div class="tsd-panel tsd-typography">
-            <a
-              href="#open-mev-router"
-              id="open-mev-router"
-              style="color: inherit; text-decoration: none"
-            >
-              <h1>Open MEV Router</h1>
-            </a>
-            <p>
-              OpenMevRouter contract serves to replace the SushiswapRouter
-              contract on Ethereum, Avalanche and Polygon.
-            </p>
-            <p>Inbuilt MEV contract. For the User it aims to offer:</p>
-            <ol>
-              <li>Better order routing for minimal slippage</li>
-              <li>At source MEV with instant user rewards</li>
-            </ol>
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@openmev/router</title><meta name="description" content="Documentation for @openmev/router"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@openmev/router</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@openmev/router</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#open-mev-router-----" id="open-mev-router-----" style="color: inherit; text-decoration: none;">
+  <h1>Open MEV Router <img src="https://github.com/manifoldfinance/OpenMevRouter/actions/workflows/foundry.yaml/badge.svg" alt="Foundry"> <img src="https://github.com/manifoldfinance/OpenMevRouter/actions/workflows/brownie.yaml/badge.svg" alt="Brownie"> <img src="https://github.com/manifoldfinance/OpenMevRouter/actions/workflows/dapptools.yml/badge.svg" alt="DappTools"> <img src="https://github.com/manifoldfinance/OpenMevRouter/actions/workflows/hardhat.yaml/badge.svg" alt="Hardhat"> <img src="https://github.com/manifoldfinance/OpenMevRouter/actions/workflows/echidna.yaml/badge.svg" alt="Echidna"></h1>
+</a>
 
-            <a
-              href="#version-1-mev-strategies"
-              id="version-1-mev-strategies"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Version 1 MEV strategies</h2>
-            </a>
-            <ul>
-              <li>cross-dex backruns for swaps and liquidity changes</li>
-              <li>reduced slippage fallback router</li>
-            </ul>
-            <p>The contract leverages and depends on 2 external protocols:</p>
-            <ol>
-              <li>Aave V2 for flashloan backruns</li>
-              <li>
-                Uniswap V2 (or equivalent on another network) for backrun
-                completion and fallback swaps
-              </li>
-            </ol>
+<a href="#optimal-mev-swap-router-contract-for-v2-amm39s-on-ethereum-avalanche-and-polygon" id="optimal-mev-swap-router-contract-for-v2-amm39s-on-ethereum-avalanche-and-polygon" style="color: inherit; text-decoration: none;">
+  <h3>Optimal MEV swap router contract for V2 AMM&#39;s on Ethereum, Avalanche and Polygon.</h3>
+</a>
+<p><a href="https://github.com/Uniswap/v2-periphery/blob/master/contracts/interfaces/IUniswapV2Router02.sol">IUniswapV2Router</a> compatible MEV router contract and library included within. </p>
+<p>For the User it aims to offer:</p>
+<ol>
+<li>Better order routing for minimal slippage</li>
+<li>At source MEV with instant rewards</li>
+<li>Lower gas costs for swaps and liquidity changes</li>
+<li>Efficient execution (with Manifold MEV protection relay)</li>
+</ol>
+<p>For the Liquidity providers:</p>
+<ol>
+<li>Inclusive rewards</li>
+<li>Reduced impermanent loss</li>
+</ol>
+<p>For the Exchange providers:</p>
+<ol>
+<li>Inclusive rewards</li>
+<li>Increased adoption</li>
+</ol>
+<p>For the Ethereum environment:</p>
+<ol>
+<li>Reduced MEV attacks and fee spikes</li>
+<li>Healthy growth in MEV space with inclusive incentives</li>
+</ol>
 
-            <a
-              href="#version-1-testing-progress"
-              id="version-1-testing-progress"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Version 1 testing progress</h2>
-            </a>
-            <p>
-              Swaps and backruns are working as expected. A full test suite
-              needs validation - test suite is written in - python3
-              (pytest/hypothesis) - solidity (ds-test/dapptools/foundry)
-            </p>
-            <p>
-              yAcademy scheduled for auditing 3rd party contracted auditor
-              scheduled as well for an audit. Potentially some gas savings and
-              optimisations to do.
-            </p>
+<a href="#version-1-mev-strategies" id="version-1-mev-strategies" style="color: inherit; text-decoration: none;">
+  <h2>Version 1 MEV Strategies</h2>
+</a>
+<ul>
+<li>cross-dex backruns for swaps and liquidity changes</li>
+<li>reduced slippage fallback router</li>
+</ul>
+<p>The contract leverages and depends on 2 external protocols:</p>
+<ol>
+<li>Aave V2 for flashloan backruns</li>
+<li>Uniswap V2 (or equivalent on another network) for backrun completion and fallback swaps</li>
+</ol>
 
-            <a
-              href="#improvements-for-version-2"
-              id="improvements-for-version-2"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Improvements for Version 2</h2>
-            </a>
-            <ul>
-              <li>
-                sandwiches - held off because code gets a bit messier and not so
-                attractive for users
-              </li>
-              <li>
-                triangular backruns - search and calculations will use alot more
-                gas
-              </li>
-              <li>curve integration for backruns and reduced slippage</li>
-            </ul>
+<a href="#version-1-todos-for-implementation" id="version-1-todos-for-implementation" style="color: inherit; text-decoration: none;">
+  <h2>Version 1 TODOs for implementation:</h2>
+</a>
+<ul>
+<li>Agree reward payout structure / contract</li>
+<li>Upgradeable implementation for library addresses</li>
+</ul>
 
-            <a
-              href="#advantages-over-current-setup-for-backruns-and-sandwiches"
-              id="advantages-over-current-setup-for-backruns-and-sandwiches"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Advantages over current setup for backruns and sandwiches</h2>
-            </a>
-            <ul>
-              <li>
-                no state lag - calculations are exact at the time of execution
-              </li>
-              <li>capture all sushiswap smart contract txs, not just UX</li>
-              <li>instant user rewards upon successful backrun</li>
-              <li>
-                no bundle needed. Tx is self contained and executed accurately
-                whenever it goes on-chain, so it does not need to compete to be
-                at the head of the block for a pre-known state.
-              </li>
-              <li>can run on Avalanche and Polygon with no change</li>
-              <li>transparency for methods and rewards</li>
-              <li>can work with or without MEV protection relay</li>
-            </ul>
+<a href="#project-interaction" id="project-interaction" style="color: inherit; text-decoration: none;">
+  <h2>Project Interaction</h2>
+</a>
+<p>This project is compatible with Foundry, Brownie, DappTools and Hardhat.</p>
 
-            <a
-              href="#disadvantages"
-              id="disadvantages"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Disadvantages</h2>
-            </a>
-            <ul>
-              <li>
-                potentially more gas cost for swaps to check backruns even if no
-                backrun is executed
-              </li>
-              <li>dependent on external protocols</li>
-              <li>lose privacy over math and methods</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-          <nav class="tsd-navigation primary">
-            <ul>
-              <li class="current"><a href="modules.html">Exports</a></li>
-            </ul>
-          </nav>
-          <nav class="tsd-navigation secondary menu-sticky">
-            <ul>
-              <li class="tsd-kind-class">
-                <a href="classes/ERC20__factory.html" class="tsd-kind-icon"
-                  >ERC20__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a href="classes/IERC20__factory.html" class="tsd-kind-icon"
-                  >IERC20__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/ILendingPoolAddressesProvider__factory.html"
-                  class="tsd-kind-icon"
-                  >ILending<wbr />Pool<wbr />Addresses<wbr />Provider__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/ILendingPool__factory.html"
-                  class="tsd-kind-icon"
-                  >ILending<wbr />Pool__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/IUniswapV2Factory__factory.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Factory__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/IUniswapV2Pair__factory.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Pair__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/IUniswapV2Router01__factory.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Router01__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/IUniswapV2Router02__factory.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Router02__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a href="classes/IWETH__factory.html" class="tsd-kind-icon"
-                  >IWETH__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/OpenMevLibrary__factory.html"
-                  class="tsd-kind-icon"
-                  >Open<wbr />Mev<wbr />Library__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/OpenMevRouter__factory.html"
-                  class="tsd-kind-icon"
-                  >Open<wbr />Mev<wbr />Router__factory</a
-                >
-              </li>
-              <li class="tsd-kind-class">
-                <a
-                  href="classes/TwoStepOwnable__factory.html"
-                  class="tsd-kind-icon"
-                  >Two<wbr />Step<wbr />Ownable__factory</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/ERC20.html" class="tsd-kind-icon">ERC20</a>
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/IERC20.html" class="tsd-kind-icon"
-                  >IERC20</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/ILendingPool.html" class="tsd-kind-icon"
-                  >ILending<wbr />Pool</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a
-                  href="interfaces/ILendingPoolAddressesProvider.html"
-                  class="tsd-kind-icon"
-                  >ILending<wbr />Pool<wbr />Addresses<wbr />Provider</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a
-                  href="interfaces/IUniswapV2Factory.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Factory</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/IUniswapV2Pair.html" class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Pair</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a
-                  href="interfaces/IUniswapV2Router01.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Router01</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a
-                  href="interfaces/IUniswapV2Router02.html"
-                  class="tsd-kind-icon"
-                  >IUniswap<wbr />V2<wbr />Router02</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/IWETH.html" class="tsd-kind-icon">IWETH</a>
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/OpenMevLibrary.html" class="tsd-kind-icon"
-                  >Open<wbr />Mev<wbr />Library</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/OpenMevRouter.html" class="tsd-kind-icon"
-                  >Open<wbr />Mev<wbr />Router</a
-                >
-              </li>
-              <li class="tsd-kind-interface">
-                <a href="interfaces/TwoStepOwnable.html" class="tsd-kind-icon"
-                  >Two<wbr />Step<wbr />Ownable</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <footer class="">
-      <div class="container">
-        <h2>Legend</h2>
-        <div class="tsd-legend-group">
-          <ul class="tsd-legend">
-            <li class="tsd-kind-constructor tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Constructor</span>
-            </li>
-            <li class="tsd-kind-property tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Property</span>
-            </li>
-            <li class="tsd-kind-method tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Method</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-property tsd-parent-kind-interface">
-              <span class="tsd-kind-icon">Property</span>
-            </li>
-            <li class="tsd-kind-method tsd-parent-kind-interface">
-              <span class="tsd-kind-icon">Method</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static">
-              <span class="tsd-kind-icon">Static property</span>
-            </li>
-            <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static">
-              <span class="tsd-kind-icon">Static method</span>
-            </li>
-          </ul>
-        </div>
-        <h2>Settings</h2>
-        <p>
-          Theme
-          <select id="theme">
-            <option value="os">OS</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </p>
-      </div>
-    </footer>
-    <div class="overlay"></div>
-    <script src="assets/main.js"></script>
-  </body>
-</html>
+<a href="#compiling-the-contract-and-library" id="compiling-the-contract-and-library" style="color: inherit; text-decoration: none;">
+  <h2>Compiling the Contract and Library</h2>
+</a>
+<p>Foundry</p>
+<pre><code class="language-sh"><span class="hl-0">$ forge build --force --names --sizes</span><br/><span class="hl-0">Compiling...</span><br/><span class="hl-0">Compiling 17 files with 0.8.10</span><br/><span class="hl-0">Compiler run successful (with warnings)</span><br/><span class="hl-0">  compiler version: 0.8.10</span><br/><span class="hl-0">    - ERC20</span><br/><span class="hl-0">    - OpenMevRouter</span><br/><span class="hl-0">    - TwoStepOwnable</span><br/><span class="hl-0">    - ABDKMathQuad</span><br/><span class="hl-0">    - Address</span><br/><span class="hl-0">    - OpenMevLibrary</span><br/><span class="hl-0">    - SafeTransferLib</span><br/><span class="hl-0">    - TransferHelper</span><br/><span class="hl-0">    - OpenMevRouterTest</span><br/><span class="hl-0">    - DataTypes</span><br/><span class="hl-0">    - ILendingPool</span><br/><span class="hl-0">    - ILendingPoolAddressesProvider</span><br/><span class="hl-0">    - IUniswapV2Factory</span><br/><span class="hl-0">    - IUniswapV2Pair</span><br/><span class="hl-0">    - IUniswapV2Router01</span><br/><span class="hl-0">    - IUniswapV2Router02</span><br/><span class="hl-0">    - IWETH</span><br/><span class="hl-0">    - DSTest</span><br/><br/><span class="hl-0">name             size (bytes)</span><br/><span class="hl-0">-----------------------------</span><br/><span class="hl-0">ABDKMathQuad         141</span><br/><span class="hl-0">Address              141</span><br/><span class="hl-0">DSTest               201</span><br/><span class="hl-0">DataTypes            141</span><br/><span class="hl-0">ERC20                0</span><br/><span class="hl-0">ILendingPool         0</span><br/><span class="hl-0">ILendingPoolAddressesProvider 0</span><br/><span class="hl-0">IUniswapV2Factory    0</span><br/><span class="hl-0">IUniswapV2Pair       0</span><br/><span class="hl-0">IUniswapV2Router01   0</span><br/><span class="hl-0">IUniswapV2Router02   0</span><br/><span class="hl-0">IWETH                0</span><br/><span class="hl-0">OpenMevLibrary       9481</span><br/><span class="hl-0">OpenMevRouter        0</span><br/><span class="hl-0">OpenMevRouterTest    0</span><br/><span class="hl-0">SafeTransferLib      141</span><br/><span class="hl-0">TransferHelper       141</span><br/><span class="hl-0">TwoStepOwnable       0</span><br/>
+</code></pre>
+<p>Brownie</p>
+<pre><code class="language-sh"><span class="hl-0">$ brownie compile --size</span><br/><span class="hl-0">Brownie v1.18.1 - Python development framework </span><span class="hl-1">for</span><span class="hl-0"> Ethereum</span><br/><br/><span class="hl-0">Compiling contracts...</span><br/><span class="hl-0">  Solc version: 0.8.12</span><br/><span class="hl-0">  Optimizer: Enabled  Runs: 200</span><br/><span class="hl-0">  EVM Version: Istanbul</span><br/><span class="hl-0">Generating build data...</span><br/><span class="hl-0"> - ERC20</span><br/><span class="hl-0"> - OpenMevRouter</span><br/><span class="hl-0"> - TwoStepOwnable</span><br/><span class="hl-0"> - ABDKMathQuad</span><br/><span class="hl-0"> - OpenMevLibrary</span><br/><span class="hl-0"> - SafeTransferLib</span><br/><span class="hl-0"> - OpenMevRouterTest</span><br/><span class="hl-0">WARNING: deployed size of OpenMevRouterTest is 24971.0 bytes, exceeds EIP-170 limit of 24577</span><br/><span class="hl-0"> - DataTypes</span><br/><span class="hl-0"> - ILendingPool</span><br/><span class="hl-0"> - ILendingPoolAddressesProvider</span><br/><span class="hl-0"> - IUniswapV2Factory</span><br/><span class="hl-0"> - IUniswapV2Pair</span><br/><span class="hl-0"> - IUniswapV2Router01</span><br/><span class="hl-0"> - IUniswapV2Router02</span><br/><span class="hl-0"> - IWETH</span><br/><span class="hl-0"> - DSTest</span><br/><br/><span class="hl-0">Generating interface ABIs...</span><br/><span class="hl-0">============ Deployment Bytecode Sizes ============</span><br/><span class="hl-0">  OpenMevRouterTest  -  24,971B  (101.60%)</span><br/><span class="hl-0">  OpenMevRouter      -  23,349B  (95.00%)</span><br/><span class="hl-0">  OpenMevLibrary     -   9,423B  (38.34%)</span><br/><span class="hl-0">  DSTest             -     158B  (0.64%)</span><br/><span class="hl-0">  ABDKMathQuad       -      86B  (0.35%)</span><br/><span class="hl-0">  Address            -      86B  (0.35%)</span><br/><span class="hl-0">  SafeTransferLib    -      86B  (0.35%)</span><br/><span class="hl-0">  TransferHelper     -      86B  (0.35%)</span>
+</code></pre>
+<p>Hardhat</p>
+<pre><code class="language-sh"><span class="hl-0">$ npx hardhat compile</span><br/><span class="hl-0">Generating typings for: 18 artifacts </span><span class="hl-1">in</span><span class="hl-0"> dir: src/ </span><span class="hl-1">for</span><span class="hl-0"> target: ethers-v5</span><br/><span class="hl-0">Successfully generated 29 typings!</span><br/><span class="hl-0">Compiled 17 Solidity files successfully</span>
+</code></pre>
+
+<a href="#deploying-the-contract-and-library" id="deploying-the-contract-and-library" style="color: inherit; text-decoration: none;">
+  <h2>Deploying the Contract and Library</h2>
+</a>
+<p>Brownie</p>
+<pre><code class="language-sh"><span class="hl-0">$ brownie run deploy.py --network mainnet-fork1</span><br/><span class="hl-0">Brownie v1.18.1 - Python development framework </span><span class="hl-1">for</span><span class="hl-0"> Ethereum</span><br/><br/><span class="hl-0">Running </span><span class="hl-2">&#39;scripts/deploy.py::main&#39;</span><span class="hl-0">...</span><br/><span class="hl-0">Deploying Open MEV Router library and contract</span><br/><span class="hl-0">Transaction sent: 0xdc59d4be30010e466b2917b69f0b91c4e6b16f728aa5ff3eacbf193c5fae4d97</span><br/><span class="hl-0">  Gas price: 0.0 gwei   Gas limit: 6721975   Nonce: 2</span><br/><span class="hl-0">  OpenMevLibrary.constructor confirmed   Block: 14161347   Gas used: 2088671 (31.07%)</span><br/><span class="hl-0">  OpenMevLibrary deployed at: 0xE7eD6747FaC5360f88a2EFC03E00d25789F69291</span><br/><br/><span class="hl-0">Transaction sent: 0xf61e22d3aee5b05f6997037a8ab8f9a934c153c5ad2f830a201eba0881eaf523</span><br/><span class="hl-0">  Gas price: 0.0 gwei   Gas limit: 6721975   Nonce: 3</span><br/><span class="hl-0">  OpenMevRouter.constructor confirmed   Block: 14161348   Gas used: 5117467 (76.13%)</span><br/><span class="hl-0">  OpenMevRouter deployed at: 0x6951b5Bd815043E3F842c1b026b0Fa888Cc2DD85</span><br/><br/><span class="hl-0">Deployed</span>
+</code></pre>
+
+<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
+  <h2>Running tests</h2>
+</a>
+<p>Set your ETH_RPC_URL as an environment var</p>
+<pre><code class="language-sh"><span class="hl-3">export</span><span class="hl-0"> ETH_RPC_URL=&lt;Your alchemy / node / moralis url&gt;</span>
+</code></pre>
+<p>Foundry solidity tests</p>
+<pre><code class="language-sh"><span class="hl-0">$ forge </span><span class="hl-4">test</span><span class="hl-0"> -f </span><span class="hl-2">&quot;</span><span class="hl-5">$ETH_RPC_URL</span><span class="hl-2">&quot;</span><span class="hl-0"> -vvvv --fork-block-number 14327540</span><br/><br/><span class="hl-0">Running 2 tests </span><span class="hl-1">for</span><span class="hl-0"> OpenMevRouterTest.json:OpenMevRouterTest</span><br/><span class="hl-0">[PASS] </span><span class="hl-4">testExample</span><span class="hl-0">() (gas: 190)</span><br/><span class="hl-0">Traces:</span><br/><br/><span class="hl-0">  [190] </span><span class="hl-4">OpenMevRouterTest::testExample</span><span class="hl-0">()</span><br/><span class="hl-0">    └─ </span><span class="hl-4">←</span><span class="hl-0"> ()</span><br/><br/><span class="hl-0">[PASS] </span><span class="hl-4">testSwapExactETHForTokens</span><span class="hl-0">() (gas: 145990)</span><br/><span class="hl-0">Traces:</span><br/><br/><span class="hl-0">  [145990] </span><span class="hl-4">OpenMevRouterTest::testSwapExactETHForTokens</span><span class="hl-0">()</span><br/><span class="hl-0">    ├─ [137313] OpenMevRouter::swapExactETHForTokens{value: 10000000000000000000}(0, [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48], 0xa3a771a7c4afa7f0a3f88cc6512542241851c926, 1646492355)</span><br/><span class="hl-0">    │   ├─ [9623] OpenMevLibrary::getAmountsOut(0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac, 10000000000000000000, [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48])</span><br/><span class="hl-0">    │   │   ├─ [2517] </span><span class="hl-4">0x397f…aca0::0902f1ac</span><span class="hl-0">()</span><br/><span class="hl-0">    │   │   │   └─ ← 0x00000000000000000000000000000000000000000000000000005d84a3236f7400000000000000000000000000000000000000000000083f1ba0d94c0baa52a20000000000000000000000000000000000000000000000000000000062237ac3</span><br/><span class="hl-0">    │   │   └─ ← [10000000000000000000, 26317788729]</span><br/><span class="hl-0">    │   ├─ [23974] 0xc02a…6cc2::d0e30db0{value: </span><span class="hl-4">10000000000000000000}</span><span class="hl-0">()</span><br/><span class="hl-0">    │   │   ├─ emit topic 0: 0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c</span><br/><span class="hl-0">    │   │   │       topic 1: 0x00000000000000000000000018669eb6c7dfc21dcdb787feb4b3f1ebb3172400</span><br/><span class="hl-0">    │   │   │          data: 0x0000000000000000000000000000000000000000000000008ac7230489e80000</span><br/><span class="hl-0">    │   │   └─ </span><span class="hl-4">←</span><span class="hl-0"> ()</span><br/><span class="hl-0">    │   ├─ [1376] OpenMevLibrary::pairFor(0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0x397ff1542f962076d0bfe58ea045ffa2d347aca0</span><br/><span class="hl-0">    │   ├─ [6450] 0xc02a…6cc2::a9059cbb(000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca00000000000000000000000000000000000000000000000008ac7230489e80000)</span><br/><span class="hl-0">    │   │   ├─ emit topic 0: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef</span><br/><span class="hl-0">    │   │   │       topic 1: 0x00000000000000000000000018669eb6c7dfc21dcdb787feb4b3f1ebb3172400</span><br/><span class="hl-0">    │   │   │       topic 2: 0x000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca0</span><br/><span class="hl-0">    │   │   │          data: 0x0000000000000000000000000000000000000000000000008ac7230489e80000</span><br/><span class="hl-0">    │   │   └─ ← 0x0000000000000000000000000000000000000000000000000000000000000001</span><br/><span class="hl-0">    │   ├─ [831] OpenMevLibrary::sortTokens(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</span><br/><span class="hl-0">    │   ├─ [1376] OpenMevLibrary::pairFor(0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0x397ff1542f962076d0bfe58ea045ffa2d347aca0</span><br/><span class="hl-0">    │   ├─ [66702] 0x397f…aca0::022c0d9f(0000000000000000000000000000000000000000000000000000000620a996390000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a3a771a7c4afa7f0a3f88cc6512542241851c92600000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000)</span><br/><span class="hl-0">    │   │   ├─ [44017] 0xa0b8…eb48::a9059cbb(000000000000000000000000a3a771a7c4afa7f0a3f88cc6512542241851c9260000000000000000000000000000000000000000000000000000000620a99639)</span><br/><span class="hl-0">    │   │   │   ├─ [36728] 0xa232…bdcf::a9059cbb(000000000000000000000000a3a771a7c4afa7f0a3f88cc6512542241851c9260000000000000000000000000000000000000000000000000000000620a99639)</span><br/><span class="hl-0">    │   │   │   │   ├─ emit topic 0: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef</span><br/><span class="hl-0">    │   │   │   │   │       topic 1: 0x000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca0</span><br/><span class="hl-0">    │   │   │   │   │       topic 2: 0x000000000000000000000000a3a771a7c4afa7f0a3f88cc6512542241851c926</span><br/><span class="hl-0">    │   │   │   │   │          data: 0x0000000000000000000000000000000000000000000000000000000620a99639</span><br/><span class="hl-0">    │   │   │   │   └─ ← 0x0000000000000000000000000000000000000000000000000000000000000001</span><br/><span class="hl-0">    │   │   │   └─ ← 0x0000000000000000000000000000000000000000000000000000000000000001</span><br/><span class="hl-0">    │   │   ├─ [1315] 0xa0b8…eb48::70a08231(000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca0)</span><br/><span class="hl-0">    │   │   │   ├─ [529] 0xa232…bdcf::70a08231(000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca0)</span><br/><span class="hl-0">    │   │   │   │   └─ ← 0x00000000000000000000000000000000000000000000000000005d7e8279d93b</span><br/><span class="hl-0">    │   │   │   └─ ← 0x00000000000000000000000000000000000000000000000000005d7e8279d93b</span><br/><span class="hl-0">    │   │   ├─ [534] 0xc02a…6cc2::70a08231(000000000000000000000000397ff1542f962076d0bfe58ea045ffa2d347aca0)</span><br/><span class="hl-0">    │   │   │   └─ ← 0x00000000000000000000000000000000000000000000083fa667fc50959252a2</span><br/><span class="hl-0">    │   │   ├─ emit topic 0: 0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1</span><br/><span class="hl-0">    │   │   │          data: 0x00000000000000000000000000000000000000000000000000005d7e8279d93b00000000000000000000000000000000000000000000083fa667fc50959252a2</span><br/><span class="hl-0">    │   │   ├─ emit topic 0: 0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822</span><br/><span class="hl-0">    │   │   │       topic 1: 0x00000000000000000000000018669eb6c7dfc21dcdb787feb4b3f1ebb3172400</span><br/><span class="hl-0">    │   │   │       topic 2: 0x000000000000000000000000a3a771a7c4afa7f0a3f88cc6512542241851c926</span><br/><span class="hl-0">    │   │   │          data: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008ac7230489e800000000000000000000000000000000000000000000000000000000000620a996390000000000000000000000000000000000000000000000000000000000000000</span><br/><span class="hl-0">    │   │   └─ </span><span class="hl-4">←</span><span class="hl-0"> ()</span><br/><span class="hl-0">    │   ├─ [303] OpenMevLibrary::unchecked_inc(0)</span><br/><span class="hl-0">    │   │   └─ ← 1</span><br/><span class="hl-0">    │   ├─ [4279] OpenMevLibrary::isAaveAddress(0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← </span><span class="hl-4">true</span><br/><span class="hl-0">    │   ├─ [3315] 0xa0b8…eb48::70a08231(00000000000000000000000018669eb6c7dfc21dcdb787feb4b3f1ebb3172400)</span><br/><span class="hl-0">    │   │   ├─ [2529] 0xa232…bdcf::70a08231(00000000000000000000000018669eb6c7dfc21dcdb787feb4b3f1ebb3172400)</span><br/><span class="hl-0">    │   │   │   └─ ← 0x0000000000000000000000000000000000000000000000000000000000000000</span><br/><span class="hl-0">    │   │   └─ ← 0x0000000000000000000000000000000000000000000000000000000000000000</span><br/><span class="hl-0">    │   ├─ [831] OpenMevLibrary::sortTokens(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</span><br/><span class="hl-0">    │   ├─ [1376] OpenMevLibrary::pairFor(0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0x397ff1542f962076d0bfe58ea045ffa2d347aca0</span><br/><span class="hl-0">    │   ├─ [2564] 0x5c69…aa6f::e6a43905(000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)</span><br/><span class="hl-0">    │   │   └─ ← 0x000000000000000000000000b4e16d0168e52d35cacd2c6185b44281ec28c9dc</span><br/><span class="hl-0">    │   ├─ [8371] OpenMevLibrary::getOptimalAmounts(0x397ff1542f962076d0bfe58ea045ffa2d347aca0, 0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, true, 0)</span><br/><span class="hl-0">    │   │   ├─ [517] </span><span class="hl-4">0x397f…aca0::0902f1ac</span><span class="hl-0">()</span><br/><span class="hl-0">    │   │   │   └─ ← 0x00000000000000000000000000000000000000000000000000005d7e8279d93b00000000000000000000000000000000000000000000083fa667fc50959252a20000000000000000000000000000000000000000000000000000000062237ac3</span><br/><span class="hl-0">    │   │   ├─ [2504] </span><span class="hl-4">0xb4e1…c9dc::0902f1ac</span><span class="hl-0">()</span><br/><span class="hl-0">    │   │   │   └─ ← 0x00000000000000000000000000000000000000000000000000005dc9a7254ac60000000000000000000000000000000000000000000008419e1e5b9791912dfb0000000000000000000000000000000000000000000000000000000062237a7d</span><br/><span class="hl-0">    │   │   └─ ← 0, 0</span><br/><span class="hl-0">    │   ├─ [303] OpenMevLibrary::unchecked_inc(0)</span><br/><span class="hl-0">    │   │   └─ ← 1</span><br/><span class="hl-0">    │   └─ ← [10000000000000000000, 26317788729]</span><br/><span class="hl-0">    └─ </span><span class="hl-4">←</span><span class="hl-0"> ()</span>
+</code></pre>
+<p>Brownie</p>
+<pre><code class="language-sh"><span class="hl-0">$ brownie </span><span class="hl-4">test</span><span class="hl-0"> -v --network mainnet-fork1</span><br/><span class="hl-0">Brownie v1.18.1 - Python development framework </span><span class="hl-1">for</span><span class="hl-0"> Ethereum</span><br/><br/><span class="hl-0">========================================================================================= </span><span class="hl-4">test</span><span class="hl-0"> session starts =========================================================================================</span><br/><span class="hl-0">collected 5 items</span><br/><br/><span class="hl-0">tests/test_Swaps.py::test_swapExactTokensForTokens  PASSED                                                                                                                                       [ 20%]</span><br/><span class="hl-0">tests/test_Swaps.py::test_swapExactETHForUSDT PASSED                                                                                                                                            [ 40%]</span><br/><span class="hl-0">tests/test_Swaps.py::test_swapExactUSDTForTokens PASSED                                                                                                                                         [ 60%]</span><br/><span class="hl-0">tests/test_Swaps.py::test_swapExactETHForTokensMEV PASSED                                                                                                                                       [ 80%]</span><br/><span class="hl-0">tests/test_Swaps.py::test_swapExactETHForTokens PASSED                                                                                                                                          [100%]</span><br/><br/><span class="hl-0">==================================================================================== 5 passed </span><span class="hl-1">in</span><span class="hl-0"> 132.11s (0:02:12) ====================================================================================</span><br/><span class="hl-0">Terminating </span><span class="hl-3">local</span><span class="hl-0"> RPC client...</span>
+</code></pre>
+<p>To run a more visiual simulation deployment and testing for a combination of user swaps</p>
+<pre><code class="language-python"><span class="hl-6">$</span><span class="hl-0"> brownie run deployAndTest.py </span><span class="hl-6">--</span><span class="hl-0">network mainnet-fork1</span><br/><span class="hl-0">Brownie v1.17.2 - Python development framework </span><span class="hl-1">for</span><span class="hl-0"> Ethereum</span><br/><span class="hl-0">...</span><br/><span class="hl-0">Running </span><span class="hl-2">&#39;scripts/deployAndTest.py::main&#39;</span><span class="hl-0">...</span><br/><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">Deploy Open MEV Router contract</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">fbbdb9f378185da217d7bec8e639a987a00d346f5b879d406e2d39938c143d0a</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">2</span><br/><span class="hl-0">  OpenMevRouter.constructor confirmed   Block: </span><span class="hl-8">14161347</span><span class="hl-0">   Gas used: </span><span class="hl-8">5068936</span><span class="hl-0"> (</span><span class="hl-8">75.41</span><span class="hl-0">%)</span><br/><span class="hl-0">  OpenMevRouter deployed at: </span><span class="hl-3">0x</span><span class="hl-8">E7eD6747FaC5360f88a2EFC03E00d25789F69291</span><br/><br/><span class="hl-0">Deployed. Funding test account</span><br/><span class="hl-0">...</span><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">TEST </span><span class="hl-8">1</span><span class="hl-0">: small swaps complete </span><span class="hl-1">as</span><span class="hl-0"> usual</span><br/><span class="hl-7">#----------------------------------</span><br/><br/><span class="hl-0">Swap ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> OHM</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">1000000000000000000000</span><br/><span class="hl-0">User OHM balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">e8b28a374a5cc5f1a34579a622335ac3987bec12f4455734fdb333a07a595bc5</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">3</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161357</span><span class="hl-0">   Gas used: </span><span class="hl-8">119256</span><span class="hl-0"> (</span><span class="hl-8">1.77</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999800000000000000000</span><br/><span class="hl-0">User OHM balance =  </span><span class="hl-8">9186789584</span><br/><br/><span class="hl-7">#----------------------------------</span><br/><span class="hl-0">Swap OHM </span><span class="hl-6">-&gt;</span><span class="hl-0"> DAI</span><br/><br/><span class="hl-0">User OHM balance =  </span><span class="hl-8">9186789584</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">05dc5c5f5425c64f6d4cc35e9a2eaa45da044b8f1707d03a3a7bae3aba52bd3d</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">4</span><br/><span class="hl-0">  Transaction confirmed   Block: </span><span class="hl-8">14161358</span><span class="hl-0">   Gas used: </span><span class="hl-8">44043</span><span class="hl-0"> (</span><span class="hl-8">0.66</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">0e6aff3b5d4ad1cf33cea1635eaef31aee0af25b7a2ce33deffc1698ef7a86c8</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">5</span><br/><span class="hl-0">  OpenMevRouter.swapExactTokensForTokens confirmed   Block: </span><span class="hl-8">14161359</span><span class="hl-0">   Gas used: </span><span class="hl-8">91600</span><span class="hl-0"> (</span><span class="hl-8">1.36</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User OHM balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">627042655326085149192</span><br/><br/><span class="hl-7">#----------------------------------</span><br/><span class="hl-0">Swap DAI </span><span class="hl-6">-&gt;</span><span class="hl-0"> ETH</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999800000000000000000</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">627042655326085149192</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">c873181b8cde3680d3fe6c696fe7f65187d718b0d166c13796fe1928f692da59</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">6</span><br/><span class="hl-0">  Transaction confirmed   Block: </span><span class="hl-8">14161360</span><span class="hl-0">   Gas used: </span><span class="hl-8">44070</span><span class="hl-0"> (</span><span class="hl-8">0.66</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">40283ab8d2b383434d66aff893c1db4715f2bc2fd6cc52f93660c10ac8be466c</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">7</span><br/><span class="hl-0">  OpenMevRouter.swapExactTokensForETH confirmed   Block: </span><span class="hl-8">14161361</span><span class="hl-0">   Gas used: </span><span class="hl-8">88877</span><span class="hl-0"> (</span><span class="hl-8">1.32</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999998024600903628058</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-7">#----------------------------------</span><br/><span class="hl-0">Swap ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> OHM </span><span class="hl-6">-&gt;</span><span class="hl-0"> DAI</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999998024600903628058</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">aab5a48d01745c38a296628abcb6767371746a65c62bca9b4286258e2e9737df</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">8</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161362</span><span class="hl-0">   Gas used: </span><span class="hl-8">149931</span><span class="hl-0"> (</span><span class="hl-8">2.23</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999798024600903628058</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">626994000514970938067</span><br/><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">TEST </span><span class="hl-8">2</span><span class="hl-0">: force uniswap trade through +ve slippage</span><br/><span class="hl-7">#----------------------------------</span><br/><br/><span class="hl-0">Swap ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> USDC</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999798024600903628058</span><br/><span class="hl-0">User USDC balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">e2b9e854b39179747bcf789f3e53cdf5b6a27a1790b9621ae8c6dd353669b634</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">9</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161363</span><span class="hl-0">   Gas used: </span><span class="hl-8">133319</span><span class="hl-0"> (</span><span class="hl-8">1.98</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">999598024600903628058</span><br/><span class="hl-0">User USDC balance =  </span><span class="hl-8">630183003</span><br/><span class="hl-0">Reverting state</span><br/><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">TEST </span><span class="hl-8">3</span><span class="hl-0">: flashloan backrun </span><span class="hl-1">from</span><span class="hl-0"> large swap</span><br/><span class="hl-7">#----------------------------------</span><br/><br/><span class="hl-0">Swap </span><span class="hl-8">300</span><span class="hl-0"> ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> DAI</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">1000000000000000000000</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">MEV_VAULT DAI balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">SUSHI_VAULT DAI balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">abdd5c5f20b6c73765754fa59c73c78e870901717bfc04673ee58a131c019b76</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">3</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161357</span><span class="hl-0">   Gas used: </span><span class="hl-8">476341</span><span class="hl-0"> (</span><span class="hl-8">7.09</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">700000000000000000000</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">908686268873332466980007</span><br/><span class="hl-0">MEV_VAULT DAI balance =  </span><span class="hl-8">5396890556585287140906</span><br/><span class="hl-0">SUSHI_VAULT DAI balance =  </span><span class="hl-8">5396890556585287140906</span><br/><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">TEST </span><span class="hl-8">4</span><span class="hl-0">: non-backrunable large multi-hop swap (no opposite pairs)</span><br/><span class="hl-7">#----------------------------------</span><br/><br/><span class="hl-0">Swap </span><span class="hl-8">700</span><span class="hl-0"> ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> OHM </span><span class="hl-6">-&gt;</span><span class="hl-0"> DAI</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">1000000000000000000000</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">81160412980dc71b99fa12b3b40a04416e0ff16b107d7034df0679aa1bf9f564</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">3</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161357</span><span class="hl-0">   Gas used: </span><span class="hl-8">175731</span><span class="hl-0"> (</span><span class="hl-8">2.61</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">300000000000000000000</span><br/><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span><br/><span class="hl-0">TEST </span><span class="hl-8">5</span><span class="hl-0">: non-flashloan backrun </span><span class="hl-1">from</span><span class="hl-0"> large swap (compare to TEST </span><span class="hl-8">3</span><span class="hl-0">)</span><br/><span class="hl-7">#----------------------------------</span><br/><br/><span class="hl-0">Transfering DAI to contract</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">220a1d3e690a419df538474eef948f57827cabaa0b2b6301b745ab0ca9493970</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">4</span><br/><span class="hl-0">  Transaction confirmed   Block: </span><span class="hl-8">14161358</span><span class="hl-0">   Gas used: </span><span class="hl-8">37054</span><span class="hl-0"> (</span><span class="hl-8">0.55</span><span class="hl-0">%)</span><br/><br/><span class="hl-7">#----------------------------------</span><br/><span class="hl-0">Swap </span><span class="hl-8">300</span><span class="hl-0"> ETH </span><span class="hl-6">-&gt;</span><span class="hl-0"> DAI</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">300000000000000000000</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">MEV_VAULT DAI balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">SUSHI_VAULT DAI balance =  </span><span class="hl-8">0</span><br/><br/><span class="hl-0">Transaction sent: </span><span class="hl-3">0x</span><span class="hl-8">224888f69133a7d9debb14dc20b5b6c1c706233cded78264a328fb102d817860</span><br/><span class="hl-0">  Gas price: </span><span class="hl-8">0.0</span><span class="hl-0"> gwei   Gas limit: </span><span class="hl-8">6721975</span><span class="hl-0">   Nonce: </span><span class="hl-8">5</span><br/><span class="hl-0">  OpenMevRouter.swapExactETHForTokens confirmed   Block: </span><span class="hl-8">14161359</span><span class="hl-0">   Gas used: </span><span class="hl-8">266940</span><span class="hl-0"> (</span><span class="hl-8">3.97</span><span class="hl-0">%)</span><br/><br/><span class="hl-0">User ETH balance =  </span><span class="hl-8">0</span><br/><span class="hl-0">User DAI balance =  </span><span class="hl-8">908686268873332466980007</span><br/><span class="hl-0">MEV_VAULT DAI balance =  </span><span class="hl-8">5539192740227197900613</span><br/><span class="hl-0">SUSHI_VAULT DAI balance =  </span><span class="hl-8">5539192740227197900613</span><br/><span class="hl-7">#----------------------------------</span><br/><span class="hl-0">Non-flashloan backrun uses less gas </span><span class="hl-3">and</span><span class="hl-0"> profits more by  </span><span class="hl-8">284604367283821519414</span><span class="hl-0">  DAI</span><br/><span class="hl-7">#---------------------------------------------------------------------------------------------------</span>
+</code></pre>
+
+<a href="#improvements-for-version-2" id="improvements-for-version-2" style="color: inherit; text-decoration: none;">
+  <h2>Improvements for Version 2</h2>
+</a>
+<ul>
+<li>sandwiches - held off because code gets a bit messier and not so attractive for users</li>
+<li>triangular backruns - search and calculations will use alot more gas</li>
+<li>curve and uni v3 integration for backruns and reduced slippage</li>
+<li>optimal order routing - split orders and routers</li>
+</ul>
+
+<a href="#advantages-over-current-setup-for-backruns-and-sandwiches" id="advantages-over-current-setup-for-backruns-and-sandwiches" style="color: inherit; text-decoration: none;">
+  <h2>Advantages over current setup for backruns and sandwiches</h2>
+</a>
+<ul>
+<li>no state lag - calculations are exact at the time of execution</li>
+<li>capture all sushiswap smart contract txs, not just UX</li>
+<li>instant user rewards upon successful backrun</li>
+<li>no bundle needed. Tx is self contained and executed accurately whenever it goes on-chain, so it does not need to compete to be at the head of the block for a pre-known state.</li>
+<li>can run on Avalanche and Polygon with no change</li>
+<li>transparency for methods and rewards</li>
+<li>can work with or without MEV protection relay</li>
+</ul>
+
+<a href="#disadvantages" id="disadvantages" style="color: inherit; text-decoration: none;">
+  <h2>Disadvantages</h2>
+</a>
+<ul>
+<li>potentially more gas cost for swaps to check backruns even if no backrun is executed</li>
+<li>dependent on external protocols</li>
+<li>lose privacy over math and methods</li>
+</ul>
+
+<a href="#gas-shaving-methods" id="gas-shaving-methods" style="color: inherit; text-decoration: none;">
+  <h2>Gas Shaving methods</h2>
+</a>
+<ul>
+<li><a href="https://gist.github.com/hrkrshnn/ee8fabd532058307229d65dcd5836ddc">https://gist.github.com/hrkrshnn/ee8fabd532058307229d65dcd5836ddc</a></li>
+<li><a href="https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde">https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde</a></li>
+<li><a href="https://dev.to/javier123454321/solidity-gas-optimization-pt1-4271">https://dev.to/javier123454321/solidity-gas-optimization-pt1-4271</a></li>
+<li><a href="https://mudit.blog/solidity-gas-optimization-tips/">https://mudit.blog/solidity-gas-optimization-tips/</a></li>
+<li><a href="https://github.com/iskdrews/awesome-solidity-gas-optimization">https://github.com/iskdrews/awesome-solidity-gas-optimization</a></li>
+</ul>
+
+<a href="#contract-size-reduction" id="contract-size-reduction" style="color: inherit; text-decoration: none;">
+  <h2>Contract size reduction</h2>
+</a>
+<ul>
+<li><a href="https://ethereum.org/en/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/">https://ethereum.org/en/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/</a></li>
+</ul>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li><li class=" tsd-kind-namespace"><a href="modules/dsTestSol.html">ds<wbr/>Test<wbr/>Sol</a></li><li class=" tsd-kind-namespace"><a href="modules/factories.html">factories</a></li><li class=" tsd-kind-namespace"><a href="modules/iUniswapV2RouterSol.html">i<wbr/>Uniswap<wbr/>V2<wbr/>Router<wbr/>Sol</a></li><li class=" tsd-kind-namespace"><a href="modules/openMevRouterTSol.html">open<wbr/>Mev<wbr/>RouterTSol</a></li><li class=" tsd-kind-namespace"><a href="modules/revertingErc20Sol.html">reverting<wbr/>Erc20<wbr/>Sol</a></li><li class=" tsd-kind-namespace"><a href="modules/revertingErc20TSol.html">reverting<wbr/>Erc20TSol</a></li><li class=" tsd-kind-namespace"><a href="modules/uint512TSol.html">uint512TSol</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-reference"><a href="modules.html#DSTest" class="tsd-kind-icon">DSTest</a></li><li class="tsd-kind-reference"><a href="modules.html#DSTest__factory" class="tsd-kind-icon">DSTest__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#ERC20__factory" class="tsd-kind-icon">ERC20__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#ILendingPoolAddressesProvider__factory" class="tsd-kind-icon">ILending<wbr/>Pool<wbr/>Addresses<wbr/>Provider__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#ILendingPool__factory" class="tsd-kind-icon">ILending<wbr/>Pool__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Factory__factory" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Factory__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Pair__factory" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Pair__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Router01" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router01</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Router01__factory" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router01__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Router02" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router02</a></li><li class="tsd-kind-reference"><a href="modules.html#IUniswapV2Router02__factory" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Router02__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#IWETH__factory" class="tsd-kind-icon">IWETH__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#OpenMevLibrary__factory" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Library__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#OpenMevRouterTest" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router<wbr/>Test</a></li><li class="tsd-kind-reference"><a href="modules.html#OpenMevRouterTest__factory" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router<wbr/>Test__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#OpenMevRouter__factory" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#RevertingToken" class="tsd-kind-icon">Reverting<wbr/>Token</a></li><li class="tsd-kind-reference"><a href="modules.html#RevertingToken__factory" class="tsd-kind-icon">Reverting<wbr/>Token__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#TestUint512" class="tsd-kind-icon">Test<wbr/>Uint512</a></li><li class="tsd-kind-reference"><a href="modules.html#TestUint512__factory" class="tsd-kind-icon">Test<wbr/>Uint512__factory</a></li><li class="tsd-kind-reference"><a href="modules.html#TwoStepOwnable__factory" class="tsd-kind-icon">Two<wbr/>Step<wbr/>Ownable__factory</a></li><li class="tsd-kind-interface"><a href="interfaces/ERC20.html" class="tsd-kind-icon">ERC20</a></li><li class="tsd-kind-interface"><a href="interfaces/ILendingPool.html" class="tsd-kind-icon">ILending<wbr/>Pool</a></li><li class="tsd-kind-interface"><a href="interfaces/ILendingPoolAddressesProvider.html" class="tsd-kind-icon">ILending<wbr/>Pool<wbr/>Addresses<wbr/>Provider</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Factory.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Factory</a></li><li class="tsd-kind-interface"><a href="interfaces/IUniswapV2Pair.html" class="tsd-kind-icon">IUniswap<wbr/>V2<wbr/>Pair</a></li><li class="tsd-kind-interface"><a href="interfaces/IWETH.html" class="tsd-kind-icon">IWETH</a></li><li class="tsd-kind-interface"><a href="interfaces/OpenMevLibrary.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Library</a></li><li class="tsd-kind-interface"><a href="interfaces/OpenMevRouter.html" class="tsd-kind-icon">Open<wbr/>Mev<wbr/>Router</a></li><li class="tsd-kind-interface"><a href="interfaces/TwoStepOwnable.html" class="tsd-kind-icon">Two<wbr/>Step<wbr/>Ownable</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
