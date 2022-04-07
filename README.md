@@ -1,7 +1,7 @@
 ---
-title: OpenMEV Router Contract V01 for SushiSwap
+title: OpenMEV Router Contract V02 for SushiSwap
 description: OpenMEV Router Contract Overview
-version: c981d26
+version: 30aae18
 author: Sandy Bradley, Sam Bacha, Manifold Finance, Inc.
 license: CC-2.5-NC-ND / GPL-v3.0
 ---
@@ -25,7 +25,7 @@ The contract leverages and depends on 2 external protocols:
 1. Aave V2 for flashloan backruns
 2. Uniswap V2 (or equivalent on another network) for backrun completion and fallback swaps
 
-## Version 1 testing progress
+## Version 2 (30aae18) testing progress
 
 Swaps and backruns are working as expected.
 A full test suite needs validation - test suite is written in - python3 (pytest/hypothesis) - solidity (ds-test/dapptools/foundry)
@@ -33,12 +33,6 @@ A full test suite needs validation - test suite is written in - python3 (pytest/
 yAcademy scheduled for auditing
 3rd party contracted auditor scheduled as well for an audit.
 Potentially some gas savings and optimisations to do.
-
-## Improvements for Version 2
-
-- sandwiches - held off because code gets a bit messier and not so attractive for users
-- triangular backruns - search and calculations will use alot more gas
-- curve integration for backruns and reduced slippage
 
 ## Advantages over current setup for backruns and sandwiches
 
