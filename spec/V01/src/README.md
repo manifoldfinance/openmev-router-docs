@@ -161,6 +161,15 @@ It has been observed and reported non-economic manipulations of UniswapV2/Sushis
 
 [^2]: DeltaV1 Manipulation, DeFi Threat Matrix draft-v3.0.0, Bacha et al. 2022. [DOI]() [https://github.com/manifoldfinance/defi-threat/tree/master/src#example-fake-wash-trading-on-uniswap](https://github.com/manifoldfinance/defi-threat/tree/master/src#example-fake-wash-trading-on-uniswap) [see https://etherscan.io/token/0x05934eba98486693aaec2d00b0e9ce918e37dc3f#tokenTrade](https://etherscan.io/token/0x05934eba98486693aaec2d00b0e9ce918e37dc3f#tokenTrade)
 
+#### Mitigation
+
+> TODO add denylist for usage by Sushi's frontend and API metrics via their Subgraph 
+
+### Attack: Transaction Replay
+
+> Examine such attack vectors, TODO
+
+
 
 ### Security properties
 
