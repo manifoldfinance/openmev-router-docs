@@ -6,8 +6,10 @@ status: in progress
 
 # SushiGuard ADR, Spec, and Proofs Document
 
-!!! NOTE
-    The following tables were sourced from a smart contract vulnrability framework that I am unable to find the source of. We make no claim on their authorship, and if you happen to know who it is from please let us know for citations. 
+    !!! Following Sections are sourced from
+    https://securing.github.io/SCSVS/1.2/0x10-V1-Architecture-Design-Threat-modelling.html
+    https://securing.github.io/SCSVS/1.2/0x16-V7-Gas-Usage-And-Limitations.html
+    https://securing.github.io/SCSVS/1.2/0x15-V6-Malicious-Input-Handling.html
 
 ## A: Architecture, design and threat modeling
 
