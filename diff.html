@@ -1,0 +1,166 @@
+<pre style="font-family:consolas,monospace">
+<span style="color:#880000">------ </span><span style="font-weight:bold">InterfaceSushiSwapRouterV01.sol 2022-06-28 02:28:52.000000Z</span>
+<span style="color:#008800">++++++ </span><span style="font-weight:bold">InterfaceSushiGuardRouterV01.sol 2022-06-28 02:28:32.000000Z</span>
+<span style="color:#000000"><span style="background-color:#c0c0c0">@|</span></span><span style="font-weight:bold">-1,18 +1,49</span> ============================================================
+<span style="color:#000000"><span style="background-color:#880000">-|</span></span><span style="color:#c0c0c0">interface</span><span style="color:#880000"> SushiSwapRouterV01 {</span>
+<span style="color:#000000"><span style="background-color:#880000">-|</span></span><span style="color:#c0c0c0">  function</span><span style="color:#880000"> WETH</span><span style="color:#c0c0c0">() external</span><span style="color:#880000"> pure returns (address)</span><span style="color:#c0c0c0">;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>interface<span style="color:#008800"> SushiGuardRouterV01 {</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error ExcessiveInputAmount();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error ExecuteNotAuthorized();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error Expired();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error IdenticalAddresses();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientAAmount();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientAllowance();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientBAmount();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientLiquidity();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientLiquidity();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InsufficientOutputAmount();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InvalidPath();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error InvalidPath();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error NoReceivers();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error NoTokens();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error NotPercent();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error Overflow();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error TokenIsFeeOnTransfer();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error TransferFailed();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error Unauthorized();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error ZeroAddress();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error ZeroAddress();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    error ZeroAmount();</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    event LoanError(address indexed token, uint256 amountIn);</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    event MEV(address indexed user, address indexed token, uint256 value);</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    event OwnershipTransferred(</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address indexed previousOwner,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address indexed newOwner</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    );</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    fallback() external payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>    function<span style="color:#008800"> acceptOwnership</span>() external;
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function addLiquidity(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address tokenA,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address tokenB,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountADesired,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountBDesired,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountAMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountBMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address to,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 deadline
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    )
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        external
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        returns (
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 amountA,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 amountB,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 liquidity
+<span style="color:#000000"><span style="background-color:#c0c0c0">@|</span></span><span style="font-weight:bold">-21,56 +52,82</span> ============================================================
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function addLiquidityETH(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address token,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountTokenDesired,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountTokenMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountETHMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address to,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 deadline
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    )
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        external
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        payable
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        returns (
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 amountToken,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 amountETH,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>            uint256 liquidity
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        );
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#880000">-|</span></span><span style="color:#c0c0c0">  function</span><span style="color:#880000"> factory</span><span style="color:#c0c0c0">() external</span><span style="color:#880000"> pure</span><span style="color:#c0c0c0"> returns (</span><span style="color:#880000">address</span><span style="color:#c0c0c0">);</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>    function<span style="color:#008800"> cancelOwnershipTransfer</span>() external<span style="color:#008800"> payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function executeOperation(</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address[] memory assets,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        uint256[] memory amounts,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        uint256[] memory premiums,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address initiator,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        bytes memory params</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    ) external</span> returns (<span style="color:#008800">bool</span>);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function getAmountIn(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountOut,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveIn,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveOut
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external pure returns (uint256 amountIn);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function getAmountOut(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountIn,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveIn,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveOut
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external pure returns (uint256 amountOut);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function getAmountsIn(uint256 amountOut, address[] memory path)
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        external
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        view
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        returns (uint256[] memory amounts);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function getAmountsOut(uint256 amountIn, address[] memory path)
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        external
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        view
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        returns (uint256[] memory amounts);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function harvest(</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        uint256 percentage,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address[] memory tokens,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address[] memory receivers</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    ) external payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function isOwner() external view returns (bool);</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function onFlashLoan(</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address sender,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        address token,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        uint256 amount,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        uint256 fee,</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">        bytes memory data</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    ) external;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function owner() external view returns (address);</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function quote(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountA,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveA,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 reserveB
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external pure returns (uint256 amountB);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function removeLiquidity(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address tokenA,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address tokenB,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 liquidity,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountAMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountBMin,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address to,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 deadline
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external returns (uint256 amountA, uint256 amountB);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0">@|</span></span><span style="font-weight:bold">-187,17 +244,25</span> ============================================================
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function swapTokensForExactETH(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountOut,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountInMax,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address[] memory path,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address to,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 deadline
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external returns (uint256[] memory amounts);
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    function swapTokensForExactTokens(
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountOut,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 amountInMax,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address[] memory path,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        address to,
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>        uint256 deadline
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>    ) external returns (uint256[] memory amounts);
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function transferOwnership(address newOwner) external payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function updateAaveAsset(bool isActive, address asset) external payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    function updateAllAaveAssets() external payable;</span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800"></span>
+<span style="color:#000000"><span style="background-color:#008800">+|</span></span><span style="color:#008800">    receive() external payable;</span>
+<span style="color:#000000"><span style="background-color:#c0c0c0"> |</span></span>}
+</pre>
