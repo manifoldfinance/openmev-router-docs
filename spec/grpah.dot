@@ -1,0 +1,602 @@
+digraph G {
+  graph [ ratio = "auto", page = "100", compound =true, bgcolor = "#2e3e56" ];
+  node [ style = "filled", fillcolor = "#edad56", color = "#edad56", penwidth =3 ];
+  edge [ color = "#fcfcfc", penwidth =2, fontname = "helvetica Neue Ultra Light" ];
+subgraph "clusterOpenMevRouter" {
+  graph [ label = "OpenMevRouter", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "OpenMevRouter.ensure" [ label = "ensure", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevRouter._addLiquidity" [ label = "_addLiquidity", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevRouter.addLiquidity" [ label = "addLiquidity", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.addLiquidityETH" [ label = "addLiquidityETH", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.removeLiquidity" [ label = "removeLiquidity", color = "#FF9797", fillcolor = "#FF9797" ];
+  "OpenMevRouter.removeLiquidityETH" [ label = "removeLiquidityETH", color = "#FF9797", fillcolor = "#FF9797" ];
+  "OpenMevRouter.removeLiquidityWithPermit" [ label = "removeLiquidityWithPermit", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.removeLiquidityETHWithPermit" [ label = "removeLiquidityETHWithPermit", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens" [ label = "removeLiquidityETHSupportingFeeOnTransferTokens", color = "#FF9797", fillcolor = "#FF9797" ];
+  "OpenMevRouter.removeLiquidityETHWithPermitSupportingFeeOnTransferTokens" [ label = "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._swap" [ label = "_swap", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevRouter.swapExactTokensForTokens" [ label = "swapExactTokensForTokens", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapTokensForExactTokens" [ label = "swapTokensForExactTokens", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapExactETHForTokens" [ label = "swapExactETHForTokens", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapTokensForExactETH" [ label = "swapTokensForExactETH", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapExactTokensForETH" [ label = "swapExactTokensForETH", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapETHForExactTokens" [ label = "swapETHForExactTokens", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokensExecute" [ label = "_swapSupportingFeeOnTransferTokensExecute", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" [ label = "_swapSupportingFeeOnTransferTokens", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" [ label = "swapExactTokensForTokensSupportingFeeOnTransferTokens", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" [ label = "swapExactETHForTokensSupportingFeeOnTransferTokens", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" [ label = "swapExactTokensForETHSupportingFeeOnTransferTokens", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.quote" [ label = "quote", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.getAmountOut" [ label = "getAmountOut", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.getAmountIn" [ label = "getAmountIn", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.getAmountsOut" [ label = "getAmountsOut", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.getAmountsIn" [ label = "getAmountsIn", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._backrunSwaps" [ label = "_backrunSwaps" ];
+  "OpenMevRouter._flashSwapKashi" [ label = "_flashSwapKashi" ];
+  "OpenMevRouter.onFlashLoan" [ label = "onFlashLoan", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._flashSwap" [ label = "_flashSwap" ];
+  "OpenMevRouter.executeOperation" [ label = "executeOperation", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._asmSwap" [ label = "_asmSwap" ];
+  "OpenMevRouter._arb" [ label = "_arb" ];
+  "OpenMevRouter.harvest" [ label = "harvest", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter._encode" [ label = "_encode" ];
+  "OpenMevRouter._decode" [ label = "_decode" ];
+  "OpenMevRouter._isZero" [ label = "_isZero" ];
+  "OpenMevRouter._isNonZero" [ label = "_isNonZero" ];
+  "OpenMevRouter._inc" [ label = "_inc" ];
+  "OpenMevRouter._dec" [ label = "_dec" ];
+  "OpenMevRouter.<Receive Ether>" [ label = "<Receive Ether>", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.<Fallback>" [ label = "<Fallback>", color = "brown", fillcolor = "#ffbdb9" ];
+  "OpenMevRouter.Expired" [ label = "Expired" ];
+  "OpenMevRouter.InsufficientBAmount" [ label = "InsufficientBAmount" ];
+  "OpenMevRouter.InsufficientAAmount" [ label = "InsufficientAAmount" ];
+  "OpenMevRouter.type" [ label = "type" ];
+  "OpenMevRouter.InsufficientOutputAmount" [ label = "InsufficientOutputAmount" ];
+  "OpenMevRouter.ExcessiveInputAmount" [ label = "ExcessiveInputAmount" ];
+  "OpenMevRouter.InvalidPath" [ label = "InvalidPath" ];
+  "OpenMevRouter.InsufficientLiquidity" [ label = "InsufficientLiquidity" ];
+  "OpenMevRouter.ExecuteNotAuthorized" [ label = "ExecuteNotAuthorized" ];
+  "OpenMevRouter.NotPercent" [ label = "NotPercent" ];
+  "OpenMevRouter.NoReceivers" [ label = "NoReceivers" ];
+  "OpenMevRouter.NoTokens" [ label = "NoTokens" ];
+}
+
+subgraph "clusterERC20" {
+  graph [ label = "ERC20", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "ERC20.<Constructor>" [ label = "<Constructor>", color = "#FF9797", fillcolor = "#FF9797" ];
+  "ERC20.approve" [ label = "approve", color = "#FF9797", fillcolor = "#FF9797" ];
+  "ERC20.transfer" [ label = "transfer", color = "#FF9797", fillcolor = "#FF9797" ];
+  "ERC20.transferFrom" [ label = "transferFrom", color = "#FF9797", fillcolor = "#FF9797" ];
+  "ERC20.permit" [ label = "permit", color = "#FF9797", fillcolor = "#FF9797" ];
+  "ERC20.DOMAIN_SEPARATOR" [ label = "DOMAIN_SEPARATOR" ];
+  "ERC20.computeDomainSeparator" [ label = "computeDomainSeparator" ];
+  "ERC20.type" [ label = "type" ];
+}
+
+subgraph "clusterTwoStepOwnable" {
+  graph [ label = "TwoStepOwnable", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "TwoStepOwnable.<Constructor>" [ label = "<Constructor>", color = "#FF9797", fillcolor = "#FF9797" ];
+  "TwoStepOwnable.owner" [ label = "owner", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "TwoStepOwnable._onlyOwner" [ label = "_onlyOwner", color = "#edad56", fillcolor = "#edad56" ];
+  "TwoStepOwnable.onlyOwner" [ label = "onlyOwner", color = "#1bc6a6", shape =doubleoctagon ];
+  "TwoStepOwnable.isOwner" [ label = "isOwner" ];
+  "TwoStepOwnable.transferOwnership" [ label = "transferOwnership", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "TwoStepOwnable.cancelOwnershipTransfer" [ label = "cancelOwnershipTransfer", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "TwoStepOwnable.acceptOwnership" [ label = "acceptOwnership", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "TwoStepOwnable.Unauthorized" [ label = "Unauthorized" ];
+  "TwoStepOwnable.ZeroAddress" [ label = "ZeroAddress" ];
+}
+
+subgraph "clusterIWETH" {
+  graph [ label = "IWETH  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "IWETH.deposit" [ label = "deposit", color = "brown", fillcolor = "#ffbdb9" ];
+  "IWETH.transfer" [ label = "transfer", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IWETH.withdraw" [ label = "withdraw", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+subgraph "clusterOpenMevLibrary" {
+  graph [ label = "OpenMevLibrary  (lib)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "OpenMevLibrary.getReserves" [ label = "getReserves", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.quote" [ label = "quote", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.pairFor" [ label = "pairFor", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.sortTokens" [ label = "sortTokens", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getSwapsOut" [ label = "getSwapsOut", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getSwapsIn" [ label = "getSwapsIn", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getAmountOut" [ label = "getAmountOut", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getAmountIn" [ label = "getAmountIn", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getAmountsOut" [ label = "getAmountsOut", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getAmountsIn" [ label = "getAmountsIn", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.isAaveAddress" [ label = "isAaveAddress", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.getOptimalAmounts" [ label = "getOptimalAmounts", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary._asmPairFor" [ label = "_asmPairFor", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary.factoryHash" [ label = "factoryHash" ];
+  "OpenMevLibrary.aaveList" [ label = "aaveList" ];
+  "OpenMevLibrary.calcCoeffs" [ label = "calcCoeffs" ];
+  "OpenMevLibrary.calcReturns" [ label = "calcReturns" ];
+  "OpenMevLibrary.calcOptimalAmount" [ label = "calcOptimalAmount", color = "#f2c383", fillcolor = "#f2c383" ];
+  "OpenMevLibrary._isZero" [ label = "_isZero" ];
+  "OpenMevLibrary._isNonZero" [ label = "_isNonZero" ];
+  "OpenMevLibrary._inc" [ label = "_inc" ];
+  "OpenMevLibrary._dec" [ label = "_dec" ];
+  "OpenMevLibrary.IdenticalAddresses" [ label = "IdenticalAddresses" ];
+  "OpenMevLibrary.ZeroAddress" [ label = "ZeroAddress" ];
+  "OpenMevLibrary.ZeroAmount" [ label = "ZeroAmount" ];
+  "OpenMevLibrary.InsufficientLiquidity" [ label = "InsufficientLiquidity" ];
+  "OpenMevLibrary.Overflow" [ label = "Overflow" ];
+  "OpenMevLibrary.InvalidPath" [ label = "InvalidPath" ];
+}
+
+subgraph "clusterIUniswapV2Pair" {
+  graph [ label = "IUniswapV2Pair  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "IUniswapV2Pair.swap" [ label = "swap", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.name" [ label = "name", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.symbol" [ label = "symbol", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.decimals" [ label = "decimals", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.totalSupply" [ label = "totalSupply", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.balanceOf" [ label = "balanceOf", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.allowance" [ label = "allowance", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.approve" [ label = "approve", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.transfer" [ label = "transfer", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.transferFrom" [ label = "transferFrom", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.DOMAIN_SEPARATOR" [ label = "DOMAIN_SEPARATOR", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.PERMIT_TYPEHASH" [ label = "PERMIT_TYPEHASH", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.nonces" [ label = "nonces", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.permit" [ label = "permit", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.MINIMUM_LIQUIDITY" [ label = "MINIMUM_LIQUIDITY", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.factory" [ label = "factory", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.token0" [ label = "token0", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.token1" [ label = "token1", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.getReserves" [ label = "getReserves", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.price0CumulativeLast" [ label = "price0CumulativeLast", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.price1CumulativeLast" [ label = "price1CumulativeLast", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.kLast" [ label = "kLast", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.mint" [ label = "mint", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.burn" [ label = "burn", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.skim" [ label = "skim", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.sync" [ label = "sync", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Pair.initialize" [ label = "initialize", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+subgraph "clusterIUniswapV2Factory" {
+  graph [ label = "IUniswapV2Factory  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "IUniswapV2Factory.feeTo" [ label = "feeTo", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.feeToSetter" [ label = "feeToSetter", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.getPair" [ label = "getPair", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.allPairs" [ label = "allPairs", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.allPairsLength" [ label = "allPairsLength", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.createPair" [ label = "createPair", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.setFeeTo" [ label = "setFeeTo", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IUniswapV2Factory.setFeeToSetter" [ label = "setFeeToSetter", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+subgraph "clusterUint512" {
+  graph [ label = "Uint512  (lib)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "Uint512.mul256x256" [ label = "mul256x256", color = "#f2c383", fillcolor = "#f2c383" ];
+  "Uint512.add512x512" [ label = "add512x512", color = "#f2c383", fillcolor = "#f2c383" ];
+  "Uint512.sqrt512" [ label = "sqrt512", color = "#f2c383", fillcolor = "#f2c383" ];
+  "Uint512.sqrt256" [ label = "sqrt256" ];
+}
+
+subgraph "clusterSafeTransferLib" {
+  graph [ label = "SafeTransferLib  (lib)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "SafeTransferLib.safeTransferETH" [ label = "safeTransferETH", color = "#f2c383", fillcolor = "#f2c383" ];
+  "SafeTransferLib.safeTransferFrom" [ label = "safeTransferFrom", color = "#f2c383", fillcolor = "#f2c383" ];
+  "SafeTransferLib.safeTransfer" [ label = "safeTransfer", color = "#f2c383", fillcolor = "#f2c383" ];
+  "SafeTransferLib.safeApprove" [ label = "safeApprove", color = "#f2c383", fillcolor = "#f2c383" ];
+  "SafeTransferLib.didLastOptionalReturnCallSucceed" [ label = "didLastOptionalReturnCallSucceed" ];
+}
+
+subgraph "clusterILendingPool" {
+  graph [ label = "ILendingPool  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "ILendingPool.flashLoan" [ label = "flashLoan", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+subgraph "clusterIFlashBorrower" {
+  graph [ label = "IFlashBorrower  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "IFlashBorrower.onFlashLoan" [ label = "onFlashLoan", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+subgraph "clusterIBentoBoxV1" {
+  graph [ label = "IBentoBoxV1  (iface)", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "IBentoBoxV1.flashLoan" [ label = "flashLoan", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "IBentoBoxV1.totals" [ label = "totals", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+}
+
+  "OpenMevRouter.ensure";
+  "OpenMevRouter._isNonZero";
+  "OpenMevRouter.Expired";
+  "OpenMevRouter._addLiquidity";
+  "OpenMevLibrary.getReserves";
+  "OpenMevRouter._isZero";
+  "OpenMevLibrary.quote";
+  "OpenMevRouter.InsufficientBAmount";
+  "OpenMevRouter.InsufficientAAmount";
+  "OpenMevRouter.addLiquidity";
+  "OpenMevLibrary.pairFor";
+  "OpenMevRouter.addLiquidityETH";
+  "SafeTransferLib.safeTransferETH";
+  "OpenMevRouter.removeLiquidity";
+  "OpenMevLibrary.sortTokens";
+  "OpenMevRouter.removeLiquidityETH";
+  "OpenMevRouter.removeLiquidityWithPermit";
+  "OpenMevRouter.type";
+  "OpenMevRouter.removeLiquidityETHWithPermit";
+  "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens";
+  "OpenMevRouter.removeLiquidityETHWithPermitSupportingFeeOnTransferTokens";
+  "OpenMevRouter._swap";
+  "OpenMevRouter._inc";
+  "OpenMevRouter._dec";
+  "OpenMevRouter._asmSwap";
+  "OpenMevRouter.swapExactTokensForTokens";
+  "OpenMevLibrary.getSwapsOut";
+  "OpenMevRouter.InsufficientOutputAmount";
+  "OpenMevRouter._backrunSwaps";
+  "OpenMevRouter.swapTokensForExactTokens";
+  "OpenMevLibrary.getSwapsIn";
+  "OpenMevRouter.ExcessiveInputAmount";
+  "OpenMevRouter.swapExactETHForTokens";
+  "OpenMevRouter.InvalidPath";
+  "OpenMevRouter.swapTokensForExactETH";
+  "OpenMevRouter.swapExactTokensForETH";
+  "OpenMevRouter.swapETHForExactTokens";
+  "OpenMevRouter._swapSupportingFeeOnTransferTokensExecute";
+  "IUniswapV2Pair.swap";
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens";
+  "OpenMevRouter.InsufficientLiquidity";
+  "OpenMevLibrary.getAmountOut";
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens";
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens";
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens";
+  "OpenMevRouter.quote";
+  "OpenMevRouter.getAmountOut";
+  "OpenMevRouter.getAmountIn";
+  "OpenMevLibrary.getAmountIn";
+  "OpenMevRouter.getAmountsOut";
+  "OpenMevLibrary.getAmountsOut";
+  "OpenMevRouter.getAmountsIn";
+  "OpenMevLibrary.getAmountsIn";
+  "OpenMevLibrary.isAaveAddress";
+  "OpenMevLibrary.getOptimalAmounts";
+  "OpenMevRouter._arb";
+  "OpenMevRouter._flashSwapKashi";
+  "OpenMevRouter._flashSwap";
+  "OpenMevRouter._encode";
+  "IBentoBoxV1.flashLoan";
+  "OpenMevRouter.onFlashLoan";
+  "OpenMevRouter.ExecuteNotAuthorized";
+  "OpenMevRouter._decode";
+  "OpenMevRouter.executeOperation";
+  "OpenMevLibrary._asmPairFor";
+  "OpenMevRouter.harvest";
+  "OpenMevRouter.NotPercent";
+  "OpenMevRouter.NoReceivers";
+  "OpenMevRouter.NoTokens";
+  "ERC20.<Constructor>";
+  "ERC20.computeDomainSeparator";
+  "ERC20.transferFrom";
+  "ERC20.type";
+  "ERC20.permit";
+  "ERC20.DOMAIN_SEPARATOR";
+  "TwoStepOwnable._onlyOwner";
+  "TwoStepOwnable.isOwner";
+  "TwoStepOwnable.Unauthorized";
+  "TwoStepOwnable.onlyOwner";
+  "TwoStepOwnable.transferOwnership";
+  "TwoStepOwnable.ZeroAddress";
+  "TwoStepOwnable.acceptOwnership";
+  "OpenMevLibrary.IdenticalAddresses";
+  "OpenMevLibrary.ZeroAddress";
+  "OpenMevLibrary.factoryHash";
+  "OpenMevLibrary._isZero";
+  "OpenMevLibrary.ZeroAmount";
+  "OpenMevLibrary.InsufficientLiquidity";
+  "OpenMevLibrary.Overflow";
+  "OpenMevLibrary._inc";
+  "OpenMevLibrary.InvalidPath";
+  "OpenMevLibrary._dec";
+  "OpenMevLibrary._isNonZero";
+  "OpenMevLibrary.aaveList";
+  "OpenMevLibrary.calcOptimalAmount";
+  "OpenMevLibrary.calcCoeffs";
+  "Uint512.mul256x256";
+  "Uint512.add512x512";
+  "Uint512.sqrt512";
+  "OpenMevLibrary.calcReturns";
+  "Uint512.sqrt256";
+  "SafeTransferLib.safeTransferFrom";
+  "SafeTransferLib.didLastOptionalReturnCallSucceed";
+  "SafeTransferLib.safeTransfer";
+  "SafeTransferLib.safeApprove";
+  "OpenMevRouter.ensure" -> "OpenMevRouter._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter.ensure" -> "OpenMevRouter.Expired" [ color = "#1bc6a6" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevLibrary.getReserves" [ color = "white" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevRouter._isZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevRouter._isZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevLibrary.quote" [ color = "white" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevRouter.InsufficientBAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevLibrary.quote" [ color = "white" ];
+  "OpenMevRouter._addLiquidity" -> "OpenMevRouter.InsufficientAAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.addLiquidity" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.addLiquidity" -> "OpenMevRouter._addLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter.addLiquidity" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.addLiquidityETH" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.addLiquidityETH" -> "OpenMevRouter._addLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter.addLiquidityETH" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.addLiquidityETH" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.removeLiquidity" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidity" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.removeLiquidity" -> "OpenMevLibrary.sortTokens" [ color = "white" ];
+  "OpenMevRouter.removeLiquidity" -> "OpenMevRouter.InsufficientAAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidity" -> "OpenMevRouter.InsufficientBAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETH" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETH" -> "OpenMevRouter.removeLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETH" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.removeLiquidityWithPermit" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.removeLiquidityWithPermit" -> "OpenMevRouter.type" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityWithPermit" -> "OpenMevRouter.removeLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHWithPermit" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.removeLiquidityETHWithPermit" -> "OpenMevRouter.type" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHWithPermit" -> "OpenMevRouter.removeLiquidityETH" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens" -> "OpenMevRouter.removeLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.removeLiquidityETHWithPermitSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.removeLiquidityETHWithPermitSupportingFeeOnTransferTokens" -> "OpenMevRouter.type" [ color = "#1bc6a6" ];
+  "OpenMevRouter.removeLiquidityETHWithPermitSupportingFeeOnTransferTokens" -> "OpenMevRouter.removeLiquidityETHSupportingFeeOnTransferTokens" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._asmSwap" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swap" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevRouter.ExcessiveInputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter.ExcessiveInputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.swapTokensForExactETH" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevLibrary.getSwapsOut" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForETH" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevLibrary.getSwapsIn" [ color = "white" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevRouter.ExcessiveInputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevRouter._swap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.swapETHForExactTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokensExecute" -> "IUniswapV2Pair.swap" [ color = "white" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevLibrary.sortTokens" [ color = "white" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevLibrary.getAmountOut" [ color = "white" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter._swapSupportingFeeOnTransferTokens" -> "OpenMevRouter._swapSupportingFeeOnTransferTokensExecute" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._swapSupportingFeeOnTransferTokens" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._swapSupportingFeeOnTransferTokens" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactETHForTokensSupportingFeeOnTransferTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter.ensure" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter._dec" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevLibrary.pairFor" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter._swapSupportingFeeOnTransferTokens" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "SafeTransferLib.safeTransferETH" [ color = "white" ];
+  "OpenMevRouter.swapExactTokensForETHSupportingFeeOnTransferTokens" -> "OpenMevRouter._backrunSwaps" [ color = "#1bc6a6" ];
+  "OpenMevRouter.quote" -> "OpenMevLibrary.quote" [ color = "white" ];
+  "OpenMevRouter.getAmountOut" -> "OpenMevLibrary.getAmountOut" [ color = "white" ];
+  "OpenMevRouter.getAmountIn" -> "OpenMevLibrary.getAmountIn" [ color = "white" ];
+  "OpenMevRouter.getAmountsOut" -> "OpenMevLibrary.getAmountsOut" [ color = "white" ];
+  "OpenMevRouter.getAmountsIn" -> "OpenMevLibrary.getAmountsIn" [ color = "white" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevLibrary.isAaveAddress" [ color = "white" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevLibrary.getOptimalAmounts" [ color = "white" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter._arb" [ color = "#1bc6a6" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter._flashSwapKashi" [ color = "#1bc6a6" ];
+  "OpenMevRouter._backrunSwaps" -> "OpenMevRouter._flashSwap" [ color = "#1bc6a6" ];
+  "OpenMevRouter._flashSwapKashi" -> "OpenMevRouter._encode" [ color = "#1bc6a6" ];
+  "OpenMevRouter._flashSwapKashi" -> "IBentoBoxV1.flashLoan" [ color = "white" ];
+  "OpenMevRouter.onFlashLoan" -> "OpenMevRouter.ExecuteNotAuthorized" [ color = "#1bc6a6" ];
+  "OpenMevRouter.onFlashLoan" -> "OpenMevRouter._decode" [ color = "#1bc6a6" ];
+  "OpenMevRouter.onFlashLoan" -> "OpenMevRouter._arb" [ color = "#1bc6a6" ];
+  "OpenMevRouter.onFlashLoan" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter._flashSwap" -> "OpenMevRouter._encode" [ color = "#1bc6a6" ];
+  "OpenMevRouter.executeOperation" -> "OpenMevRouter.ExecuteNotAuthorized" [ color = "#1bc6a6" ];
+  "OpenMevRouter.executeOperation" -> "OpenMevRouter._decode" [ color = "#1bc6a6" ];
+  "OpenMevRouter.executeOperation" -> "OpenMevRouter._arb" [ color = "#1bc6a6" ];
+  "OpenMevRouter.executeOperation" -> "OpenMevRouter.InsufficientOutputAmount" [ color = "#1bc6a6" ];
+  "OpenMevRouter._arb" -> "OpenMevLibrary.sortTokens" [ color = "white" ];
+  "OpenMevRouter._arb" -> "OpenMevLibrary._asmPairFor" [ color = "white" ];
+  "OpenMevRouter._arb" -> "OpenMevLibrary.getAmountOut" [ color = "white" ];
+  "OpenMevRouter._arb" -> "OpenMevRouter._asmSwap" [ color = "#1bc6a6" ];
+  "OpenMevRouter._arb" -> "OpenMevLibrary._asmPairFor" [ color = "white" ];
+  "OpenMevRouter._arb" -> "OpenMevLibrary.getAmountOut" [ color = "white" ];
+  "OpenMevRouter._arb" -> "OpenMevRouter._asmSwap" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter._isZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter.NotPercent" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter._isZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter.NoReceivers" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter._isZero" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter.NoTokens" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "OpenMevRouter.harvest" -> "OpenMevRouter._inc" [ color = "#1bc6a6" ];
+  "ERC20.<Constructor>" -> "ERC20.computeDomainSeparator" [ color = "#1bc6a6" ];
+  "ERC20.transferFrom" -> "ERC20.type" [ color = "#1bc6a6" ];
+  "ERC20.permit" -> "ERC20.DOMAIN_SEPARATOR" [ color = "#1bc6a6" ];
+  "ERC20.DOMAIN_SEPARATOR" -> "ERC20.computeDomainSeparator" [ color = "#1bc6a6" ];
+  "TwoStepOwnable._onlyOwner" -> "TwoStepOwnable.isOwner" [ color = "#1bc6a6" ];
+  "TwoStepOwnable._onlyOwner" -> "TwoStepOwnable.Unauthorized" [ color = "#1bc6a6" ];
+  "TwoStepOwnable.onlyOwner" -> "TwoStepOwnable._onlyOwner" [ color = "#1bc6a6" ];
+  "TwoStepOwnable.transferOwnership" -> "TwoStepOwnable.ZeroAddress" [ color = "#1bc6a6" ];
+  "TwoStepOwnable.acceptOwnership" -> "TwoStepOwnable.Unauthorized" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.sortTokens" -> "OpenMevLibrary.IdenticalAddresses" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.sortTokens" -> "OpenMevLibrary.ZeroAddress" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.pairFor" -> "OpenMevLibrary.sortTokens" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.pairFor" -> "OpenMevLibrary._asmPairFor" [ color = "#1bc6a6" ];
+  "OpenMevLibrary._asmPairFor" -> "OpenMevLibrary.factoryHash" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getReserves" -> "OpenMevLibrary.sortTokens" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getReserves" -> "OpenMevLibrary._asmPairFor" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.quote" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.quote" -> "OpenMevLibrary.ZeroAmount" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.quote" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.quote" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.quote" -> "OpenMevLibrary.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary.ZeroAmount" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountOut" -> "OpenMevLibrary.Overflow" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary.ZeroAmount" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary._isZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary.Overflow" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountIn" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary.getReserves" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsOut" -> "OpenMevLibrary.getAmountOut" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary.sortTokens" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._asmPairFor" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary.getAmountOut" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsOut" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary.getReserves" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getAmountsIn" -> "OpenMevLibrary.getAmountIn" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary.InvalidPath" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary.sortTokens" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._asmPairFor" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary.InsufficientLiquidity" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary.getAmountIn" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getSwapsIn" -> "OpenMevLibrary._dec" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.isAaveAddress" -> "OpenMevLibrary.aaveList" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.isAaveAddress" -> "OpenMevLibrary._inc" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "OpenMevLibrary.calcCoeffs" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "OpenMevLibrary._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "OpenMevLibrary._isNonZero" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "Uint512.mul256x256" [ color = "white" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "Uint512.mul256x256" [ color = "white" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "Uint512.add512x512" [ color = "white" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "Uint512.sqrt512" [ color = "white" ];
+  "OpenMevLibrary.calcOptimalAmount" -> "OpenMevLibrary.calcReturns" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getOptimalAmounts" -> "OpenMevLibrary.calcOptimalAmount" [ color = "#1bc6a6" ];
+  "OpenMevLibrary.getOptimalAmounts" -> "OpenMevLibrary.calcOptimalAmount" [ color = "#1bc6a6" ];
+  "Uint512.sqrt512" -> "Uint512.sqrt256" [ color = "#1bc6a6" ];
+  "Uint512.sqrt512" -> "Uint512.sqrt256" [ color = "#1bc6a6" ];
+  "SafeTransferLib.safeTransferFrom" -> "SafeTransferLib.didLastOptionalReturnCallSucceed" [ color = "#1bc6a6" ];
+  "SafeTransferLib.safeTransfer" -> "SafeTransferLib.didLastOptionalReturnCallSucceed" [ color = "#1bc6a6" ];
+  "SafeTransferLib.safeApprove" -> "SafeTransferLib.didLastOptionalReturnCallSucceed" [ color = "#1bc6a6" ];
+
+
+rankdir=LR
+node [shape=plaintext]
+subgraph cluster_01 { 
+label = "Legend";
+key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td align="right" port="i1">Internal Call</td></tr>
+  <tr><td align="right" port="i2">External Call</td></tr>
+  <tr><td align="right" port="i3">Defined Contract</td></tr>
+  <tr><td align="right" port="i4">Undefined Contract</td></tr>
+  </table>>]
+key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td port="i1">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i2">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i3" bgcolor="#445773">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i4">
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="7" color="#e8726d">
+      <tr>
+       <td></td>
+      </tr>
+     </table>
+  </td></tr>
+  </table>>]
+key:i1:e -> key2:i1:w [color="#1bc6a6"]
+key:i2:e -> key2:i2:w [color="white"]
+}
+}

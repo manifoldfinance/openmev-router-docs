@@ -1,0 +1,44 @@
+| Sighash   |   Function Signature |
+|-----------|----------------------|
+| 4f6ce321  |  ensure(uint256) |
+| 6d7746bc  |  _addLiquidity(address,address,uint256,uint256,uint256,uint256) |
+| e8e33700  |  addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256) |
+| f305d719  |  addLiquidityETH(address,uint256,uint256,uint256,address,uint256) |
+| baa2abde  |  removeLiquidity(address,address,uint256,uint256,uint256,address,uint256) |
+| 02751cec  |  removeLiquidityETH(address,uint256,uint256,uint256,address,uint256) |
+| 2195995c  |  removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) |
+| ded9382a  |  removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) |
+| af2979eb  |  removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256) |
+| 5b0d5984  |  removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,| uint8,bytes32,bytes32) |
+| 898df4fa  |  _swap(address,OpenMevLibrary.Swap[]) |
+| 38ed1739  |  swapExactTokensForTokens(uint256,uint256,address[],address,uint256) |
+| 8803dbee  |  swapTokensForExactTokens(uint256,uint256,address[],address,uint256) |
+| 7ff36ab5  |  swapExactETHForTokens(uint256,address[],address,uint256) |
+| 4a25d94a  |  swapTokensForExactETH(uint256,uint256,address[],address,uint256) |
+| 18cbafe5  |  swapExactTokensForETH(uint256,uint256,address[],address,uint256) |
+| fb3bdb41  |  swapETHForExactTokens(uint256,address[],address,uint256) |
+| 8331df6d  |  _swapSupportingFeeOnTransferTokensExecute(IUniswapV2Pair,uint256,bool,address) |
+| 72e54436  |  _swapSupportingFeeOnTransferTokens(address[],address,address) |
+| 5c11d795  |  swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256) |
+| b6f9de95  |  swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256) |
+| 791ac947  |  swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256) |
+| ad615dec  |  quote(uint256,uint256,uint256) |
+| 054d50d4  |  getAmountOut(uint256,uint256,uint256) |
+| 85f8c259  |  getAmountIn(uint256,uint256,uint256) |
+| d06ca61f  |  getAmountsOut(uint256,address[]) |
+| 1f00ca74  |  getAmountsIn(uint256,address[]) |
+| e17fb328  |  _backrunSwaps(address,OpenMevLibrary.Swap[]) |
+| 0c419452  |  _flashSwapKashi(address,address,address,address,uint256) |
+| 23e30c8b  |  onFlashLoan(address,address,uint256,uint256,bytes) |
+| b92b1da0  |  _flashSwap(address,address,address,address,uint256) |
+| 920f5c84  |  executeOperation(address[],uint256[],uint256[],address,bytes) |
+| 5893eaa2  |  _asmSwap(address,uint256,uint256,address) |
+| 48eccd58  |  _arb(address,address,address,address,address,uint256) |
+| b4b0ce68  |  harvest(uint256,address[],address[]) |
+| 20df397f  |  _encode(address,address,address) |
+| 4c356099  |  _decode(bytes) |
+| 88738a3c  |  _isZero(uint256) |
+| 1e2f7b7b  |  _isNonZero(uint256) |
+| b5d9d26c  |  _inc(uint256) |
+| 1e9ae0b7  |  _dec(uint256) |
+| 0de3383f  |  _asmflashSwap() |

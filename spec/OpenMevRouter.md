@@ -1,1568 +1,1156 @@
-[@openmev/router](../README.md) / [Exports](../modules.md) / OpenMevRouter
+---
+description: OpenMevRouter
+---
 
-# Interface: OpenMevRouter
+# OpenMevRouter.sol
 
-## Hierarchy
+Optimal MEV router contract (IUniswapV2Router compatible)
 
-- `BaseContract`
 
-  ↳ **`OpenMevRouter`**
-
-## Table of contents
-
-### Properties
-
-- [\_deployedPromise](OpenMevRouter.md#_deployedpromise)
-- [\_runningEvents](OpenMevRouter.md#_runningevents)
-- [\_wrappedEmits](OpenMevRouter.md#_wrappedemits)
-- [address](OpenMevRouter.md#address)
-- [callStatic](OpenMevRouter.md#callstatic)
-- [contractName](OpenMevRouter.md#contractname)
-- [deployTransaction](OpenMevRouter.md#deploytransaction)
-- [estimateGas](OpenMevRouter.md#estimategas)
-- [filters](OpenMevRouter.md#filters)
-- [functions](OpenMevRouter.md#functions)
-- [interface](OpenMevRouter.md#interface)
-- [off](OpenMevRouter.md#off)
-- [on](OpenMevRouter.md#on)
-- [once](OpenMevRouter.md#once)
-- [populateTransaction](OpenMevRouter.md#populatetransaction)
-- [provider](OpenMevRouter.md#provider)
-- [removeListener](OpenMevRouter.md#removelistener)
-- [resolvedAddress](OpenMevRouter.md#resolvedaddress)
-- [signer](OpenMevRouter.md#signer)
-
-### Methods
-
-- [\_checkRunningEvents](OpenMevRouter.md#_checkrunningevents)
-- [\_deployed](OpenMevRouter.md#_deployed)
-- [\_wrapEvent](OpenMevRouter.md#_wrapevent)
-- [acceptOwnership](OpenMevRouter.md#acceptownership)
-- [addLiquidity](OpenMevRouter.md#addliquidity)
-- [addLiquidityETH](OpenMevRouter.md#addliquidityeth)
-- [attach](OpenMevRouter.md#attach)
-- [cancelOwnershipTransfer](OpenMevRouter.md#cancelownershiptransfer)
-- [connect](OpenMevRouter.md#connect)
-- [deployed](OpenMevRouter.md#deployed)
-- [emit](OpenMevRouter.md#emit)
-- [executeOperation](OpenMevRouter.md#executeoperation)
-- [fallback](OpenMevRouter.md#fallback)
-- [getAmountIn](OpenMevRouter.md#getamountin)
-- [getAmountOut](OpenMevRouter.md#getamountout)
-- [getAmountsIn](OpenMevRouter.md#getamountsin)
-- [getAmountsOut](OpenMevRouter.md#getamountsout)
-- [isOwner](OpenMevRouter.md#isowner)
-- [listenerCount](OpenMevRouter.md#listenercount)
-- [listeners](OpenMevRouter.md#listeners)
-- [owner](OpenMevRouter.md#owner)
-- [queryFilter](OpenMevRouter.md#queryfilter)
-- [quote](OpenMevRouter.md#quote)
-- [removeAllListeners](OpenMevRouter.md#removealllisteners)
-- [removeLiquidity](OpenMevRouter.md#removeliquidity)
-- [removeLiquidityETH](OpenMevRouter.md#removeliquidityeth)
-- [removeLiquidityETHSupportingFeeOnTransferTokens](OpenMevRouter.md#removeliquidityethsupportingfeeontransfertokens)
-- [removeLiquidityETHWithPermit](OpenMevRouter.md#removeliquidityethwithpermit)
-- [removeLiquidityETHWithPermitSupportingFeeOnTransferTokens](OpenMevRouter.md#removeliquidityethwithpermitsupportingfeeontransfertokens)
-- [removeLiquidityWithPermit](OpenMevRouter.md#removeliquiditywithpermit)
-- [swapETHForExactTokens](OpenMevRouter.md#swapethforexacttokens)
-- [swapExactETHForTokens](OpenMevRouter.md#swapexactethfortokens)
-- [swapExactETHForTokensSupportingFeeOnTransferTokens](OpenMevRouter.md#swapexactethfortokenssupportingfeeontransfertokens)
-- [swapExactTokensForETH](OpenMevRouter.md#swapexacttokensforeth)
-- [swapExactTokensForETHSupportingFeeOnTransferTokens](OpenMevRouter.md#swapexacttokensforethsupportingfeeontransfertokens)
-- [swapExactTokensForTokens](OpenMevRouter.md#swapexacttokensfortokens)
-- [swapExactTokensForTokensSupportingFeeOnTransferTokens](OpenMevRouter.md#swapexacttokensfortokenssupportingfeeontransfertokens)
-- [swapTokensForExactETH](OpenMevRouter.md#swaptokensforexacteth)
-- [swapTokensForExactTokens](OpenMevRouter.md#swaptokensforexacttokens)
-- [transferOwnership](OpenMevRouter.md#transferownership)
-- [withdraw](OpenMevRouter.md#withdraw)
-- [withdrawERC20](OpenMevRouter.md#withdrawerc20)
-
-## Properties
-
-### \_deployedPromise
-
-• **\_deployedPromise**: `Promise`<`Contract`\>
-
-#### Inherited from
-
-BaseContract.\_deployedPromise
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:100
-
-___
-
-### \_runningEvents
-
-• **\_runningEvents**: `Object`
-
-#### Index signature
-
-▪ [eventTag: `string`]: `RunningEvent`
-
-#### Inherited from
-
-BaseContract.\_runningEvents
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:101
-
-___
-
-### \_wrappedEmits
-
-• **\_wrappedEmits**: `Object`
-
-#### Index signature
-
-▪ [eventTag: `string`]: (...`args`: `any`[]) => `void`
-
-#### Inherited from
-
-BaseContract.\_wrappedEmits
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:104
-
-___
-
-### address
-
-• `Readonly` **address**: `string`
-
-#### Inherited from
-
-BaseContract.address
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:79
-
-___
-
-### callStatic
-
-• **callStatic**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `acceptOwnership` | (`overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `addLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `amountADesired`: `BigNumberish`, `amountBDesired`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `amountA`: `BigNumber` ; `amountB`: `BigNumber` ; `liquidity`: `BigNumber`  }\> |
-| `addLiquidityETH` | (`token`: `string`, `amountTokenDesired`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `amountETH`: `BigNumber` ; `amountToken`: `BigNumber` ; `liquidity`: `BigNumber`  }\> |
-| `cancelOwnershipTransfer` | (`overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `executeOperation` | (`assets`: `string`[], `amounts`: `BigNumberish`[], `premiums`: `BigNumberish`[], `initiator`: `string`, `params`: `BytesLike`, `overrides?`: `CallOverrides`) => `Promise`<`boolean`\> |
-| `getAmountIn` | (`amountOut`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `getAmountOut` | (`amountIn`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `getAmountsIn` | (`amountOut`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `getAmountsOut` | (`amountIn`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `isOwner` | (`overrides?`: `CallOverrides`) => `Promise`<`boolean`\> |
-| `owner` | (`overrides?`: `CallOverrides`) => `Promise`<`string`\> |
-| `quote` | (`amountA`: `BigNumberish`, `reserveA`: `BigNumberish`, `reserveB`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `removeLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`] & { `amountA`: `BigNumber` ; `amountB`: `BigNumber`  }\> |
-| `removeLiquidityETH` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`] & { `amountETH`: `BigNumber` ; `amountToken`: `BigNumber`  }\> |
-| `removeLiquidityETHSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `removeLiquidityETHWithPermit` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`] & { `amountETH`: `BigNumber` ; `amountToken`: `BigNumber`  }\> |
-| `removeLiquidityETHWithPermitSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `removeLiquidityWithPermit` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`, `BigNumber`] & { `amountA`: `BigNumber` ; `amountB`: `BigNumber`  }\> |
-| `swapETHForExactTokens` | (`amountOut`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `swapExactETHForTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `swapExactETHForTokensSupportingFeeOnTransferTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `swapExactTokensForETH` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `swapExactTokensForETHSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `swapExactTokensForTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `swapExactTokensForTokensSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `swapTokensForExactETH` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `swapTokensForExactTokens` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`[]\> |
-| `transferOwnership` | (`newOwner`: `string`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `withdraw` | (`to`: `string`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-| `withdrawERC20` | (`token`: `string`, `recipient`: `string`, `overrides?`: `CallOverrides`) => `Promise`<`void`\> |
-
-#### Overrides
-
-BaseContract.callStatic
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:930
-
-___
-
-### contractName
-
-• **contractName**: ``"OpenMevRouter"``
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:413
-
-___
-
-### deployTransaction
-
-• `Readonly` **deployTransaction**: `TransactionResponse`
-
-#### Inherited from
-
-BaseContract.deployTransaction
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:99
-
-___
-
-### estimateGas
-
-• **estimateGas**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `acceptOwnership` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `addLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `amountADesired`: `BigNumberish`, `amountBDesired`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `addLiquidityETH` | (`token`: `string`, `amountTokenDesired`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `cancelOwnershipTransfer` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `executeOperation` | (`assets`: `string`[], `amounts`: `BigNumberish`[], `premiums`: `BigNumberish`[], `initiator`: `string`, `params`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `getAmountIn` | (`amountOut`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `getAmountOut` | (`amountIn`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `getAmountsIn` | (`amountOut`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `getAmountsOut` | (`amountIn`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `isOwner` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `owner` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `quote` | (`amountA`: `BigNumberish`, `reserveA`: `BigNumberish`, `reserveB`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
-| `removeLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `removeLiquidityETH` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `removeLiquidityETHSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `removeLiquidityETHWithPermit` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `removeLiquidityETHWithPermitSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `removeLiquidityWithPermit` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapETHForExactTokens` | (`amountOut`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactETHForTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactETHForTokensSupportingFeeOnTransferTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactTokensForETH` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactTokensForETHSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactTokensForTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapExactTokensForTokensSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapTokensForExactETH` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `swapTokensForExactTokens` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `transferOwnership` | (`newOwner`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `withdraw` | (`to`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-| `withdrawERC20` | (`token`: `string`, `recipient`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
-
-#### Overrides
-
-BaseContract.estimateGas
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:1200
-
-___
-
-### filters
-
-• **filters**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `OwnershipTransferred` | (`previousOwner?`: ``null`` \| `string`, `newOwner?`: ``null`` \| `string`) => `OwnershipTransferredEventFilter` |
-| `OwnershipTransferred(address,address)` | (`previousOwner?`: ``null`` \| `string`, `newOwner?`: ``null`` \| `string`) => `OwnershipTransferredEventFilter` |
-
-#### Overrides
-
-BaseContract.filters
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:1189
-
-___
-
-### functions
-
-• **functions**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `acceptOwnership` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `addLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `amountADesired`: `BigNumberish`, `amountBDesired`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `addLiquidityETH` | (`token`: `string`, `amountTokenDesired`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `cancelOwnershipTransfer` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `executeOperation` | (`assets`: `string`[], `amounts`: `BigNumberish`[], `premiums`: `BigNumberish`[], `initiator`: `string`, `params`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `getAmountIn` | (`amountOut`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`] & { `amountIn`: `BigNumber`  }\> |
-| `getAmountOut` | (`amountIn`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`] & { `amountOut`: `BigNumber`  }\> |
-| `getAmountsIn` | (`amountOut`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`[]] & { `amounts`: `BigNumber`[]  }\> |
-| `getAmountsOut` | (`amountIn`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`[]] & { `amounts`: `BigNumber`[]  }\> |
-| `isOwner` | (`overrides?`: `CallOverrides`) => `Promise`<[`boolean`]\> |
-| `owner` | (`overrides?`: `CallOverrides`) => `Promise`<[`string`]\> |
-| `quote` | (`amountA`: `BigNumberish`, `reserveA`: `BigNumberish`, `reserveB`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<[`BigNumber`] & { `amountB`: `BigNumber`  }\> |
-| `removeLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `removeLiquidityETH` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `removeLiquidityETHSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `removeLiquidityETHWithPermit` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `removeLiquidityETHWithPermitSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `removeLiquidityWithPermit` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapETHForExactTokens` | (`amountOut`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactETHForTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactETHForTokensSupportingFeeOnTransferTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactTokensForETH` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactTokensForETHSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactTokensForTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapExactTokensForTokensSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapTokensForExactETH` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `swapTokensForExactTokens` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `transferOwnership` | (`newOwner`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `withdraw` | (`to`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-| `withdrawERC20` | (`token`: `string`, `recipient`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
-
-#### Overrides
-
-BaseContract.functions
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:440
-
-___
-
-### interface
-
-• **interface**: `OpenMevRouterInterface`
-
-#### Overrides
-
-BaseContract.interface
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:419
-
-___
-
-### off
-
-• **off**: `OnEvent`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Overrides
-
-BaseContract.off
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:435
-
-___
-
-### on
-
-• **on**: `OnEvent`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Overrides
-
-BaseContract.on
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:436
-
-___
-
-### once
-
-• **once**: `OnEvent`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Overrides
-
-BaseContract.once
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:437
-
-___
-
-### populateTransaction
-
-• **populateTransaction**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `acceptOwnership` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `addLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `amountADesired`: `BigNumberish`, `amountBDesired`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `addLiquidityETH` | (`token`: `string`, `amountTokenDesired`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `cancelOwnershipTransfer` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `executeOperation` | (`assets`: `string`[], `amounts`: `BigNumberish`[], `premiums`: `BigNumberish`[], `initiator`: `string`, `params`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `getAmountIn` | (`amountOut`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `getAmountOut` | (`amountIn`: `BigNumberish`, `reserveIn`: `BigNumberish`, `reserveOut`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `getAmountsIn` | (`amountOut`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `getAmountsOut` | (`amountIn`: `BigNumberish`, `path`: `string`[], `overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `isOwner` | (`overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `owner` | (`overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `quote` | (`amountA`: `BigNumberish`, `reserveA`: `BigNumberish`, `reserveB`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidity` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidityETH` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidityETHSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidityETHWithPermit` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidityETHWithPermitSupportingFeeOnTransferTokens` | (`token`: `string`, `liquidity`: `BigNumberish`, `amountTokenMin`: `BigNumberish`, `amountETHMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `removeLiquidityWithPermit` | (`tokenA`: `string`, `tokenB`: `string`, `liquidity`: `BigNumberish`, `amountAMin`: `BigNumberish`, `amountBMin`: `BigNumberish`, `to`: `string`, `deadline`: `BigNumberish`, `approveMax`: `boolean`, `v`: `BigNumberish`, `r`: `BytesLike`, `s`: `BytesLike`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapETHForExactTokens` | (`amountOut`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactETHForTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactETHForTokensSupportingFeeOnTransferTokens` | (`amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactTokensForETH` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactTokensForETHSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactTokensForTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapExactTokensForTokensSupportingFeeOnTransferTokens` | (`amountIn`: `BigNumberish`, `amountOutMin`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapTokensForExactETH` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `swapTokensForExactTokens` | (`amountOut`: `BigNumberish`, `amountInMax`: `BigNumberish`, `path`: `string`[], `to`: `string`, `deadline`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `transferOwnership` | (`newOwner`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `withdraw` | (`to`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-| `withdrawERC20` | (`token`: `string`, `recipient`: `string`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
-
-#### Overrides
-
-BaseContract.populateTransaction
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:1446
-
-___
-
-### provider
-
-• `Readonly` **provider**: `Provider`
-
-#### Inherited from
-
-BaseContract.provider
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:82
-
-___
-
-### removeListener
-
-• **removeListener**: `OnEvent`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Overrides
-
-BaseContract.removeListener
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:438
-
-___
-
-### resolvedAddress
-
-• `Readonly` **resolvedAddress**: `Promise`<`string`\>
-
-#### Inherited from
-
-BaseContract.resolvedAddress
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:98
-
-___
-
-### signer
-
-• `Readonly` **signer**: `Signer`
-
-#### Inherited from
-
-BaseContract.signer
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:81
 
 ## Methods
 
-### \_checkRunningEvents
+### WETH
 
-▸ **_checkRunningEvents**(`runningEvent`): `void`
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `runningEvent` | `RunningEvent` |
+```solidity title="Solidity"
+function WETH() external pure returns (address)
+```
 
-#### Returns
 
-`void`
 
-#### Inherited from
 
-BaseContract.\_checkRunningEvents
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:121
-
-___
-
-### \_deployed
-
-▸ **_deployed**(`blockTag?`): `Promise`<`Contract`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `blockTag?` | `BlockTag` |
 
 #### Returns
 
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-BaseContract.\_deployed
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:114
-
-___
-
-### \_wrapEvent
-
-▸ **_wrapEvent**(`runningEvent`, `log`, `listener`): `Event`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `runningEvent` | `RunningEvent` |
-| `log` | `Log` |
-| `listener` | `Listener` |
-
-#### Returns
-
-`Event`
-
-#### Inherited from
-
-BaseContract.\_wrapEvent
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:122
-
-___
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### acceptOwnership
 
-▸ **acceptOwnership**(`overrides?`): `Promise`<`ContractTransaction`\>
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+```solidity title="Solidity"
+function acceptOwnership() external nonpayable
+```
 
-#### Returns
 
-`Promise`<`ContractTransaction`\>
+:::note Details
+Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.
+:::
 
-#### Defined in
 
-types/ethers-contracts/OpenMevRouter.ts:686
-
-___
 
 ### addLiquidity
 
-▸ **addLiquidity**(`tokenA`, `tokenB`, `amountADesired`, `amountBDesired`, `amountAMin`, `amountBMin`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB
+
+```solidity title="Solidity"
+function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenA` | `string` |
-| `tokenB` | `string` |
-| `amountADesired` | `BigNumberish` |
-| `amountBDesired` | `BigNumberish` |
-| `amountAMin` | `BigNumberish` |
-| `amountBMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| tokenA | address | Token in pool |
+| tokenB | address | Token in pool |
+| amountADesired | uint256 | Amount of token A desired to add to pool |
+| amountBDesired | uint256 | Amount of token B desired to add to pool |
+| amountAMin | uint256 | Minimum amount of token A, can be 0 |
+| amountBMin | uint256 | Minimum amount of token B, can be 0 |
+| to | address | Address to receive liquidity token |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:690
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountA | uint256 | exact amount of token A added to pool |
+| amountB | uint256 | exact amount of token B added to pool |
+| liquidity | uint256 | amount of liquidity token received |
 
 ### addLiquidityETH
 
-▸ **addLiquidityETH**(`token`, `amountTokenDesired`, `amountTokenMin`, `amountETHMin`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
+
+```solidity title="Solidity"
+function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `amountTokenDesired` | `BigNumberish` |
-| `amountTokenMin` | `BigNumberish` |
-| `amountETHMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| token | address | Token in pool |
+| amountTokenDesired | uint256 | Amount of token desired to add to pool |
+| amountTokenMin | uint256 | Minimum amount of token, can be 0 |
+| amountETHMin | uint256 | Minimum amount of ETH, can be 0 |
+| to | address | Address to receive liquidity token |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:702
-
-___
-
-### attach
-
-▸ **attach**(`addressOrName`): [`OpenMevRouter`](OpenMevRouter.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `addressOrName` | `string` |
-
-#### Returns
-
-[`OpenMevRouter`](OpenMevRouter.md)
-
-#### Overrides
-
-BaseContract.attach
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:416
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountToken | uint256 | exact amount of token added to pool |
+| amountETH | uint256 | exact amount of ETH added to pool |
+| liquidity | uint256 | amount of liquidity token received |
 
 ### cancelOwnershipTransfer
 
-▸ **cancelOwnershipTransfer**(`overrides?`): `Promise`<`ContractTransaction`\>
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+```solidity title="Solidity"
+function cancelOwnershipTransfer() external payable
+```
 
-#### Returns
 
-`Promise`<`ContractTransaction`\>
+:::note Details
+Cancel a transfer of ownership to a new account. Can only be called by the current owner.
+:::
 
-#### Defined in
 
-types/ethers-contracts/OpenMevRouter.ts:712
-
-___
-
-### connect
-
-▸ **connect**(`signerOrProvider`): [`OpenMevRouter`](OpenMevRouter.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `signerOrProvider` | `string` \| `Signer` \| `Provider` |
-
-#### Returns
-
-[`OpenMevRouter`](OpenMevRouter.md)
-
-#### Overrides
-
-BaseContract.connect
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:415
-
-___
-
-### deployed
-
-▸ **deployed**(): `Promise`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Returns
-
-`Promise`<[`OpenMevRouter`](OpenMevRouter.md)\>
-
-#### Overrides
-
-BaseContract.deployed
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:417
-
-___
-
-### emit
-
-▸ **emit**(`eventName`, ...`args`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `EventFilter` |
-| `...args` | `any`[] |
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-BaseContract.emit
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:127
-
-___
 
 ### executeOperation
 
-▸ **executeOperation**(`assets`, `amounts`, `premiums`, `initiator`, `params`, `overrides?`): `Promise`<`ContractTransaction`\>
+Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
+
+```solidity title="Solidity"
+function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)
+```
+
+
+:::note Details
+Reverts if not profitable.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `assets` | `string`[] |
-| `amounts` | `BigNumberish`[] |
-| `premiums` | `BigNumberish`[] |
-| `initiator` | `string` |
-| `params` | `BytesLike` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| assets | address[] | Array of tokens to loan |
+| amounts | uint256[] | Array of amounts to loan |
+| premiums | uint256[] | Array of premiums to repay on loan amounts |
+| initiator | address | Address of flashloan initiator |
+| params | bytes | Encoded factories and tokens |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | success indicating success |
 
-#### Defined in
+### factory
 
-types/ethers-contracts/OpenMevRouter.ts:716
 
-___
 
-### fallback
+```solidity title="Solidity"
+function factory() external pure returns (address)
+```
 
-▸ **fallback**(`overrides?`): `Promise`<`TransactionResponse`\>
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `TransactionRequest` |
+
 
 #### Returns
 
-`Promise`<`TransactionResponse`\>
-
-#### Inherited from
-
-BaseContract.fallback
-
-#### Defined in
-
-node_modules/@ethersproject/contracts/lib/index.d.ts:115
-
-___
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### getAmountIn
 
-▸ **getAmountIn**(`amountOut`, `reserveIn`, `reserveOut`, `overrides?`): `Promise`<`BigNumber`\>
+
+
+```solidity title="Solidity"
+function getAmountIn(uint256 amountOut, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountIn)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOut` | `BigNumberish` |
-| `reserveIn` | `BigNumberish` |
-| `reserveOut` | `BigNumberish` |
-| `overrides?` | `CallOverrides` |
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | undefined |
+| reserveIn | uint256 | undefined |
+| reserveOut | uint256 | undefined |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:725
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | undefined |
 
 ### getAmountOut
 
-▸ **getAmountOut**(`amountIn`, `reserveIn`, `reserveOut`, `overrides?`): `Promise`<`BigNumber`\>
+
+
+```solidity title="Solidity"
+function getAmountOut(uint256 amountIn, uint256 reserveIn, uint256 reserveOut) external pure returns (uint256 amountOut)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `reserveIn` | `BigNumberish` |
-| `reserveOut` | `BigNumberish` |
-| `overrides?` | `CallOverrides` |
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | undefined |
+| reserveIn | uint256 | undefined |
+| reserveOut | uint256 | undefined |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:732
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | undefined |
 
 ### getAmountsIn
 
-▸ **getAmountsIn**(`amountOut`, `path`, `overrides?`): `Promise`<`BigNumber`[]\>
+
+
+```solidity title="Solidity"
+function getAmountsIn(uint256 amountOut, address[] path) external view returns (uint256[] amounts)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOut` | `BigNumberish` |
-| `path` | `string`[] |
-| `overrides?` | `CallOverrides` |
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | undefined |
+| path | address[] | undefined |
 
 #### Returns
 
-`Promise`<`BigNumber`[]\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:739
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | undefined |
 
 ### getAmountsOut
 
-▸ **getAmountsOut**(`amountIn`, `path`, `overrides?`): `Promise`<`BigNumber`[]\>
+
+
+```solidity title="Solidity"
+function getAmountsOut(uint256 amountIn, address[] path) external view returns (uint256[] amounts)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `path` | `string`[] |
-| `overrides?` | `CallOverrides` |
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | undefined |
+| path | address[] | undefined |
 
 #### Returns
 
-`Promise`<`BigNumber`[]\>
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | undefined |
 
-#### Defined in
+### harvest
 
-types/ethers-contracts/OpenMevRouter.ts:745
+Multi-sig consensus call to distribute a given percentage of specified tokens to specified receivers.
 
-___
+```solidity title="Solidity"
+function harvest(uint256 percentage, address[] tokens, address[] receivers) external payable
+```
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| percentage | uint256 | Percentage of balance to distribute |
+| tokens | address[] | Array of token addresses to distribute |
+| receivers | address[] | Array of addresses for receiving distribution |
 
 ### isOwner
 
-▸ **isOwner**(`overrides?`): `Promise`<`boolean`\>
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+```solidity title="Solidity"
+function isOwner() external view returns (bool)
+```
 
-#### Returns
 
-`Promise`<`boolean`\>
+:::note Details
+Returns true if the caller is the current owner.
+:::
 
-#### Defined in
 
-types/ethers-contracts/OpenMevRouter.ts:751
-
-___
-
-### listenerCount
-
-▸ **listenerCount**(`eventName?`): `number`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` \| `EventFilter` |
 
 #### Returns
 
-`number`
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
 
-#### Inherited from
+### onFlashLoan
 
-BaseContract.listenerCount
+Called from BentoBox Lending pool after contract has received the flash loaned amount
 
-#### Defined in
+```solidity title="Solidity"
+function onFlashLoan(address sender, address token, uint256 amount, uint256 fee, bytes data) external nonpayable
+```
 
-node_modules/@ethersproject/contracts/lib/index.d.ts:128
 
-___
+:::note Details
+Reverts if not profitable.
+:::
 
-### listeners
-
-▸ **listeners**<`TEvent`\>(`eventFilter?`): `TypedListener`<`TEvent`\>[]
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`<`any`, `any`, `TEvent`\> |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventFilter?` | `TypedEventFilter`<`TEvent`\> |
-
-#### Returns
-
-`TypedListener`<`TEvent`\>[]
-
-#### Overrides
-
-BaseContract.listeners
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:427
-
-▸ **listeners**(`eventName?`): `Listener`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` |
-
-#### Returns
-
-`Listener`[]
-
-#### Overrides
-
-BaseContract.listeners
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:430
-
-___
+| Name | Type | Description |
+|---|---|---|
+| sender | address | Address of flashloan initiator |
+| token | address | Token to loan |
+| amount | uint256 | Amount to loan |
+| fee | uint256 | Fee to repay on loan amount |
+| data | bytes | Encoded factories and tokens |
 
 ### owner
 
-▸ **owner**(`overrides?`): `Promise`<`string`\>
 
-#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+```solidity title="Solidity"
+function owner() external view returns (address)
+```
 
-#### Returns
 
-`Promise`<`string`\>
+:::note Details
+Returns the address of the current owner.
+:::
 
-#### Defined in
 
-types/ethers-contracts/OpenMevRouter.ts:753
-
-___
-
-### queryFilter
-
-▸ **queryFilter**<`TEvent`\>(`event`, `fromBlockOrBlockhash?`, `toBlock?`): `Promise`<`TEvent`[]\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`<`any`, `any`, `TEvent`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `TypedEventFilter`<`TEvent`\> |
-| `fromBlockOrBlockhash?` | `string` \| `number` |
-| `toBlock?` | `string` \| `number` |
 
 #### Returns
 
-`Promise`<`TEvent`[]\>
-
-#### Overrides
-
-BaseContract.queryFilter
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:421
-
-___
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### quote
 
-▸ **quote**(`amountA`, `reserveA`, `reserveB`, `overrides?`): `Promise`<`BigNumber`\>
+
+
+```solidity title="Solidity"
+function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pure returns (uint256 amountB)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountA` | `BigNumberish` |
-| `reserveA` | `BigNumberish` |
-| `reserveB` | `BigNumberish` |
-| `overrides?` | `CallOverrides` |
+| Name | Type | Description |
+|---|---|---|
+| amountA | uint256 | undefined |
+| reserveA | uint256 | undefined |
+| reserveB | uint256 | undefined |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:755
-
-___
-
-### removeAllListeners
-
-▸ **removeAllListeners**<`TEvent`\>(`eventFilter`): [`OpenMevRouter`](OpenMevRouter.md)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`<`any`, `any`, `TEvent`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `eventFilter` | `TypedEventFilter`<`TEvent`\> |
-
-#### Returns
-
-[`OpenMevRouter`](OpenMevRouter.md)
-
-#### Overrides
-
-BaseContract.removeAllListeners
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:431
-
-▸ **removeAllListeners**(`eventName?`): [`OpenMevRouter`](OpenMevRouter.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` |
-
-#### Returns
-
-[`OpenMevRouter`](OpenMevRouter.md)
-
-#### Overrides
-
-BaseContract.removeAllListeners
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:434
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountB | uint256 | undefined |
 
 ### removeLiquidity
 
-▸ **removeLiquidity**(`tokenA`, `tokenB`, `liquidity`, `amountAMin`, `amountBMin`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Removes liquidity from an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+
+```solidity title="Solidity"
+function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenA` | `string` |
-| `tokenB` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountAMin` | `BigNumberish` |
-| `amountBMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| tokenA | address | Token in pool |
+| tokenB | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountAMin | uint256 | Minimum amount of token A, can be 0 |
+| amountBMin | uint256 | Minimum amount of token B, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:762
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountA | uint256 | Amount of token A received |
+| amountB | uint256 | Amount of token B received |
 
 ### removeLiquidityETH
 
-▸ **removeLiquidityETH**(`token`, `liquidity`, `amountTokenMin`, `amountETHMin`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Removes liquidity from an ERC-20⇄WETH pool and receive ETH. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+
+```solidity title="Solidity"
+function removeLiquidityETH(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountToken, uint256 amountETH)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountTokenMin` | `BigNumberish` |
-| `amountETHMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| token | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountTokenMin | uint256 | Minimum amount of token, can be 0 |
+| amountETHMin | uint256 | Minimum amount of ETH, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:773
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountToken | uint256 | Amount of token received |
+| amountETH | uint256 | Amount of ETH received |
 
 ### removeLiquidityETHSupportingFeeOnTransferTokens
 
-▸ **removeLiquidityETHSupportingFeeOnTransferTokens**(`token`, `liquidity`, `amountTokenMin`, `amountETHMin`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+
+```solidity title="Solidity"
+function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountETH)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountTokenMin` | `BigNumberish` |
-| `amountETHMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| token | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountTokenMin | uint256 | Minimum amount of token, can be 0 |
+| amountETHMin | uint256 | Minimum amount of ETH, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:783
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountETH | uint256 | Amount of ETH received |
 
 ### removeLiquidityETHWithPermit
 
-▸ **removeLiquidityETHWithPermit**(`token`, `liquidity`, `amountTokenMin`, `amountETHMin`, `to`, `deadline`, `approveMax`, `v`, `r`, `s`, `overrides?`): `Promise`<`ContractTransaction`\>
+Removes liquidity from an ERC-20⇄WETTH pool and receive ETH without pre-approval, thanks to permit
+
+```solidity title="Solidity"
+function removeLiquidityETHWithPermit(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountToken, uint256 amountETH)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountTokenMin` | `BigNumberish` |
-| `amountETHMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `approveMax` | `boolean` |
-| `v` | `BigNumberish` |
-| `r` | `BytesLike` |
-| `s` | `BytesLike` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| token | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountTokenMin | uint256 | Minimum amount of token, can be 0 |
+| amountETHMin | uint256 | Minimum amount of ETH, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
+| approveMax | bool | Whether or not the approval amount in the signature is for liquidity or uint(-1) |
+| v | uint8 | The v component of the permit signature |
+| r | bytes32 | The r component of the permit signature |
+| s | bytes32 | The s component of the permit signature |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:793
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountToken | uint256 | Amount of token received |
+| amountETH | uint256 | Amount of ETH received |
 
 ### removeLiquidityETHWithPermitSupportingFeeOnTransferTokens
 
-▸ **removeLiquidityETHWithPermitSupportingFeeOnTransferTokens**(`token`, `liquidity`, `amountTokenMin`, `amountETHMin`, `to`, `deadline`, `approveMax`, `v`, `r`, `s`, `overrides?`): `Promise`<`ContractTransaction`\>
+Identical to removeLiquidityETHWithPermit, but succeeds for tokens that take a fee on transfer.
+
+```solidity title="Solidity"
+function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountETH)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountTokenMin` | `BigNumberish` |
-| `amountETHMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `approveMax` | `boolean` |
-| `v` | `BigNumberish` |
-| `r` | `BytesLike` |
-| `s` | `BytesLike` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| token | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountTokenMin | uint256 | Minimum amount of token, can be 0 |
+| amountETHMin | uint256 | Minimum amount of ETH, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
+| approveMax | bool | Whether or not the approval amount in the signature is for liquidity or uint(-1) |
+| v | uint8 | The v component of the permit signature |
+| r | bytes32 | The r component of the permit signature |
+| s | bytes32 | The s component of the permit signature |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:807
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountETH | uint256 | Amount of ETH received |
 
 ### removeLiquidityWithPermit
 
-▸ **removeLiquidityWithPermit**(`tokenA`, `tokenB`, `liquidity`, `amountAMin`, `amountBMin`, `to`, `deadline`, `approveMax`, `v`, `r`, `s`, `overrides?`): `Promise`<`ContractTransaction`\>
+Removes liquidity from an ERC-20⇄ERC-20 pool without pre-approval, thanks to permit.
+
+```solidity title="Solidity"
+function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline, bool approveMax, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 amountA, uint256 amountB)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenA` | `string` |
-| `tokenB` | `string` |
-| `liquidity` | `BigNumberish` |
-| `amountAMin` | `BigNumberish` |
-| `amountBMin` | `BigNumberish` |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `approveMax` | `boolean` |
-| `v` | `BigNumberish` |
-| `r` | `BytesLike` |
-| `s` | `BytesLike` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| tokenA | address | Token in pool |
+| tokenB | address | Token in pool |
+| liquidity | uint256 | Amount of liquidity tokens to remove |
+| amountAMin | uint256 | Minimum amount of token A, can be 0 |
+| amountBMin | uint256 | Minimum amount of token B, can be 0 |
+| to | address | Address to receive pool tokens |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
+| approveMax | bool | Whether or not the approval amount in the signature is for liquidity or uint(-1) |
+| v | uint8 | The v component of the permit signature |
+| r | bytes32 | The r component of the permit signature |
+| s | bytes32 | The s component of the permit signature |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:821
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountA | uint256 | Amount of token A received |
+| amountB | uint256 | Amount of token B received |
 
 ### swapETHForExactTokens
 
-▸ **swapETHForExactTokens**(`amountOut`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH. Leftover ETH, if any, is returned to msg.sender. amountInMax = msg.value
+
+```solidity title="Solidity"
+function swapETHForExactTokens(uint256 amountOut, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOut` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | Amount of output tokens that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:836
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### swapExactETHForTokens
 
-▸ **swapExactETHForTokens**(`amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Swaps an exact amount of ETH for as many output tokens as possible, along the route determined by the path. The first element of path must be WETH, the last is the output token. amountIn = msg.value
+
+```solidity title="Solidity"
+function swapExactETHForTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountOutMin | uint256 | Minimum amount of output tokens that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:844
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### swapExactETHForTokensSupportingFeeOnTransferTokens
 
-▸ **swapExactETHForTokensSupportingFeeOnTransferTokens**(`amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Identical to swapExactETHForTokens, but succeeds for tokens that take a fee on transfer. amountIn = msg.value
+
+```solidity title="Solidity"
+function swapExactETHForTokensSupportingFeeOnTransferTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline) external payable
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:852
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountOutMin | uint256 | Minimum amount of output tokens that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 ### swapExactTokensForETH
 
-▸ **swapExactTokensForETH**(`amountIn`, `amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Swaps an exact amount of tokens for as much ETH as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH.
+
+```solidity title="Solidity"
+function swapExactTokensForETH(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | Amount of input tokens to send. |
+| amountOutMin | uint256 | Minimum amount of ETH that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:860
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### swapExactTokensForETHSupportingFeeOnTransferTokens
 
-▸ **swapExactTokensForETHSupportingFeeOnTransferTokens**(`amountIn`, `amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Identical to swapExactTokensForETH, but succeeds for tokens that take a fee on transfer.
+
+```solidity title="Solidity"
+function swapExactTokensForETHSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:869
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | Amount of input tokens to send. |
+| amountOutMin | uint256 | Minimum amount of ETH that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 ### swapExactTokensForTokens
 
-▸ **swapExactTokensForTokens**(`amountIn`, `amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. msg.sender should have already given the router an allowance of at least amountIn on the input token.
+
+```solidity title="Solidity"
+function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | Amount of input tokens to send. |
+| amountOutMin | uint256 | Minimum amount of output tokens that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:878
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### swapExactTokensForTokensSupportingFeeOnTransferTokens
 
-▸ **swapExactTokensForTokensSupportingFeeOnTransferTokens**(`amountIn`, `amountOutMin`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least amountIn on the input token.
+
+```solidity title="Solidity"
+function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountIn` | `BigNumberish` |
-| `amountOutMin` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:887
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amountIn | uint256 | Amount of input tokens to send. |
+| amountOutMin | uint256 | Minimum amount of output tokens that must be received |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 ### swapTokensForExactETH
 
-▸ **swapTokensForExactETH**(`amountOut`, `amountInMax`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
+
+```solidity title="Solidity"
+function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOut` | `BigNumberish` |
-| `amountInMax` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | Amount of ETH to receive |
+| amountInMax | uint256 | Maximum amount of input tokens |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:896
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### swapTokensForExactTokens
 
-▸ **swapTokensForExactTokens**(`amountOut`, `amountInMax`, `path`, `to`, `deadline`, `overrides?`): `Promise`<`ContractTransaction`\>
+Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
+
+```solidity title="Solidity"
+function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
+```
+
+
+:::note Details
+Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `amountOut` | `BigNumberish` |
-| `amountInMax` | `BigNumberish` |
-| `path` | `string`[] |
-| `to` | `string` |
-| `deadline` | `BigNumberish` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| amountOut | uint256 | Amount of output tokens to receive |
+| amountInMax | uint256 | Maximum amount of input tokens |
+| path | address[] | Array of token addresses. path.length must be &gt;= 2. Pools for each consecutive pair of addresses must exist and have liquidity |
+| to | address | Address of receiver |
+| deadline | uint256 | Unix timestamp in seconds after which the transaction will revert |
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-types/ethers-contracts/OpenMevRouter.ts:905
-
-___
+| Name | Type | Description |
+|---|---|---|
+| amounts | uint256[] | Array of input token amount and all subsequent output token amounts |
 
 ### transferOwnership
 
-▸ **transferOwnership**(`newOwner`, `overrides?`): `Promise`<`ContractTransaction`\>
+
+
+```solidity title="Solidity"
+function transferOwnership(address newOwner) external payable
+```
+
+
+:::note Details
+Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner.
+:::
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `newOwner` | `string` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| newOwner | address | undefined |
 
-#### Returns
+### updateAaveAsset
 
-`Promise`<`ContractTransaction`\>
+Update internal Aave asset flag
 
-#### Defined in
+```solidity title="Solidity"
+function updateAaveAsset(bool isActive, address asset) external payable
+```
 
-types/ethers-contracts/OpenMevRouter.ts:914
 
-___
 
-### withdraw
-
-▸ **withdraw**(`to`, `overrides?`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `to` | `string` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| isActive | bool | Boolean flagging whether to use the asset for Aave flashloans |
+| asset | address | Address of asset |
 
-#### Returns
+### updateAllAaveAssets
 
-`Promise`<`ContractTransaction`\>
+Update all internal Aave assets
 
-#### Defined in
+```solidity title="Solidity"
+function updateAllAaveAssets() external payable
+```
 
-types/ethers-contracts/OpenMevRouter.ts:919
 
-___
 
-### withdrawERC20
 
-▸ **withdrawERC20**(`token`, `recipient`, `overrides?`): `Promise`<`ContractTransaction`\>
+
+
+
+## Events
+
+### LoanError
+
+
+
+```solidity title="Solidity"
+event LoanError(bool indexed isAave, address indexed token, uint256 amountIn)
+```
+
+
+
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `token` | `string` |
-| `recipient` | `string` |
-| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+| Name | Type | Description |
+|---|---|---|
+| isAave `indexed` | bool | undefined |
+| token `indexed` | address | undefined |
+| amountIn  | uint256 | undefined |
 
-#### Returns
+### OpenMEV
 
-`Promise`<`ContractTransaction`\>
 
-#### Defined in
 
-types/ethers-contracts/OpenMevRouter.ts:924
+```solidity title="Solidity"
+event OpenMEV(address indexed user, address indexed token, uint256 value)
+```
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| user `indexed` | address | undefined |
+| token `indexed` | address | undefined |
+| value  | uint256 | undefined |
+
+### OwnershipTransferred
+
+
+
+```solidity title="Solidity"
+event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+```
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| previousOwner `indexed` | address | undefined |
+| newOwner `indexed` | address | undefined |
+
+
+
+## Errors
+
+### ExcessiveInputAmount
+
+
+
+```solidity title="Solidity"
+error ExcessiveInputAmount()
+```
+
+
+
+
+
+### ExecuteNotAuthorized
+
+
+
+```solidity title="Solidity"
+error ExecuteNotAuthorized()
+```
+
+
+
+
+
+### Expired
+
+
+
+```solidity title="Solidity"
+error Expired()
+```
+
+
+
+
+
+### IdenticalAddresses
+
+
+
+```solidity title="Solidity"
+error IdenticalAddresses()
+```
+
+
+
+
+
+### InsufficientAAmount
+
+
+
+```solidity title="Solidity"
+error InsufficientAAmount()
+```
+
+
+
+
+
+### InsufficientAllowance
+
+
+
+```solidity title="Solidity"
+error InsufficientAllowance()
+```
+
+
+
+
+
+### InsufficientBAmount
+
+
+
+```solidity title="Solidity"
+error InsufficientBAmount()
+```
+
+
+
+
+
+### InsufficientLiquidity
+
+
+
+```solidity title="Solidity"
+error InsufficientLiquidity()
+```
+
+
+
+
+
+### InsufficientOutputAmount
+
+
+
+```solidity title="Solidity"
+error InsufficientOutputAmount()
+```
+
+
+
+
+
+### InvalidPath
+
+
+
+```solidity title="Solidity"
+error InvalidPath()
+```
+
+
+
+
+
+### NoReceivers
+
+
+
+```solidity title="Solidity"
+error NoReceivers()
+```
+
+
+
+
+
+### NoTokens
+
+
+
+```solidity title="Solidity"
+error NoTokens()
+```
+
+
+
+
+
+### NotPercent
+
+
+
+```solidity title="Solidity"
+error NotPercent()
+```
+
+
+
+
+
+### Overflow
+
+
+
+```solidity title="Solidity"
+error Overflow()
+```
+
+
+
+
+
+### TokenIsFeeOnTransfer
+
+
+
+```solidity title="Solidity"
+error TokenIsFeeOnTransfer()
+```
+
+
+
+
+
+### TransferFailed
+
+
+
+```solidity title="Solidity"
+error TransferFailed()
+```
+
+
+
+
+
+### Unauthorized
+
+
+
+```solidity title="Solidity"
+error Unauthorized()
+```
+
+
+
+
+
+### ZeroAddress
+
+
+
+```solidity title="Solidity"
+error ZeroAddress()
+```
+
+
+
+
+
+### ZeroAmount
+
+
+
+```solidity title="Solidity"
+error ZeroAmount()
+```
+
+
+
+
+
+
